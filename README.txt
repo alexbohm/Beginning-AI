@@ -1,4 +1,2 @@
 # Beginning-AI
-A simple sentance gen.
-Duh
-Hi Alex.
+A simple sentance gen. (For now)
