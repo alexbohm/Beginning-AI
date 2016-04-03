@@ -12,7 +12,7 @@ class Sen_Gen(object):
 		    self.adjective = f.read().splitlines()
 		self.all_words = {}
 	def add_words(self, number):
-		for a in range(7):
+		for a in range(number):
 			self.word = str(raw_input("Word: "))
 			self.type_w = raw_input("Type: ")
 			if self.word not in self.all_words:
@@ -35,13 +35,13 @@ class Sen_Gen(object):
 				else:
 					self.ext.append(self.word)
 			else:
-				print "In List"
+				print " %s Already In List" % (self.word)
 	def gen_sen(self, lower, upper):
 		self.random = {}
-		self.random[1] = randrange(lower, upper)
-		self.random[2] = randrange(lower, upper)
-		self.random[3] = randrange(lower, upper)
-		return "%s %s the %s" % (self.noun[self.random[1]], self.verb[self.random[2]], self.noun[self.random[3]])
+		for a in range(4):
+			self.random[a] = randrange(lower, upper)
+		return "%s %s the %s %s" % (self.noun[self.random[1]], self.verb[self.random[2]],self.adjective[self.random[3]], self.noun[self.random[3]])
 sen = Sen_Gen()
 #sen.add_words(10) add ten? words
-print sen.gen_sen(5, 500)
+for a in range(20):
+	print sen.gen_sen(5, 500)
