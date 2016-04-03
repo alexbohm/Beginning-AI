@@ -2,23 +2,23 @@
 A simple sentance gen. (For now)
 
 Examples:
-title bury the branch
-title clap the sun
-slave confront the name
-quiet fax the cent
-bubble admit the rainstorm
-shape land the food
-treatment bat the car
-hot beat the pet
-goose invent the wool
-cap fold the food
-camp hope the baseball
-year kiss the aftermath
-flower fancy the crook
-summer activate the rake
-donkey hold the scarecrow
-advice hurt the oatmeal
-wren confuse the nose
-drum apologize the achieve
-cannon interfere the apparatus
-kiss exercise the milk
+calculator check the numberless route
+home assist the aberrant tank
+mint detect the giant afterthought
+week heal the staking faucet
+flag deserve the billowy toad
+addition frighten the mute cent
+rose bomb the woebegone eggnog
+kitten bind the rustic water
+throat assemble the trite class
+women balance the tan notebook
+gate invent the curly goldfish
+jail decide the sordid heat
+picture cross the exotic month
+milk exist the needy plot
+toothbrush correct the harsh water
+notebook foresee the ubiquitous spot
+temper expedite the wide cabbage
+holiday command the efficacious mother
+dirt float the industrious glove
+beginner forsake the ashamed downtown
