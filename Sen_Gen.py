@@ -32,7 +32,3 @@ class Sen_Gen(object):
 		for a in range(5):
 			self.random[a] = randrange(lower, upper)
 		return "%s %s the %s %s" % (self.types["noun"][self.random[1]], self.types["verb"][self.random[2]], self.types["adjective"][self.random[3]], self.types["noun"][self.random[4]])
-sen = Sen_Gen()
-#sen.add_words(1) #add ten? words
-print sen.gen_sen(10, 100)
-print sen.all_words
