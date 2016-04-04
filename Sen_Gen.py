@@ -1,47 +1,38 @@
 from random import randrange
-
-#types = ["noun", "verb"]
 class Sen_Gen(object):
 	def __init__(self):
-		self.noun, self.verb, self.ext, self.adjective = [], [], [], []
-		with open('nouns.txt') as f:
-		    self.noun = f.read().splitlines()
-		with open('verbs.txt') as f:
-		    self.verb = f.read().splitlines()
-		with open('adjectives.txt') as f:
-		    self.adjective = f.read().splitlines()
-		self.all_words = {}
+		self.all_words = []
+		self.types = {"noun":[], "adjective":[], "verb":[], "adverb":[], "conjunction":[], "preposition":[], "interjection":[]}
+		for type_w in self.types:
+			with open("%s.txt" % (type_w), "r") as f:
+				self.types[type_w] = f.read().splitlines()
+			self.all_words += self.types[type_w]
 	def add_words(self, number):
 		for a in range(number):
-			self.word = str(raw_input("Word: "))
-			self.type_w = raw_input("Type: ")
-			if self.word not in self.all_words:
-				self.all_words[self.word] = self.type_w
-				if self.type_w == "noun":
-					noun.append(self.word)
-					self.nouns = open("nouns.txt", "a")
-					self.nouns.write(self.word)
-					self.nouns.close()
-				elif self.type_w == "verb":
-					self.verb.append(self.word)
-					self.verbs = open("verbs.txt", "a")
-					self.verbs.write(self.word)
-					self.verbs.close()
-				elif self.type_w == "adjective":
-					self.adjective.append(self.word)
-					self.adjectives = open("adjectives.txt", "a")
-					self.adjectives.write(self.word)
-					self.adjectives.close()
-				else:
-					self.ext.append(self.word)
-			else:
-				print " %s Already In List" % (self.word)
+			word = ""
+			word = str(raw_input("Word: "))
+			while word in self.all_words:
+				if word in self.all_words:
+					print "already in list"
+				word = str(raw_input("Word: "))
+			word_type = ""
+			word_type = str(raw_input("Word Type: "))
+			while word_type not in self.types:
+				if word_type not in self.types:
+					print "invalid type"
+				word_type = str(raw_input("Word Type: "))
+			for type_w in self.types:
+				if word_type == type_w:
+					self.types[type_w].append(word)
+					with open("%s.txt" % (type_w), "a") as f:
+						f.write("%s\n" %(word))
+			self.all_words.append(word)
 	def gen_sen(self, lower, upper):
 		self.random = {}
-		for a in range(4):
+		for a in range(5):
 			self.random[a] = randrange(lower, upper)
-		return "%s %s the %s %s" % (self.noun[self.random[1]], self.verb[self.random[2]],self.adjective[self.random[3]], self.noun[self.random[3]])
+		return "%s %s the %s %s" % (self.types["noun"][self.random[1]], self.types["verb"][self.random[2]], self.types["adjective"][self.random[3]], self.types["noun"][self.random[4]])
 sen = Sen_Gen()
-#sen.add_words(10) add ten? words
-for a in range(20):
-	print sen.gen_sen(5, 500)
+#sen.add_words(1) #add ten? words
+print sen.gen_sen(10, 100)
+print sen.all_words
