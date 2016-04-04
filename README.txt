@@ -1,7 +1,7 @@
 A simple sentance generator
 ToDo:
 increase database
-make better sentance constructor
+make better sentence constructor
 
 
 Examples:
