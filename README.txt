@@ -1,4 +1,8 @@
 A simple sentance generator
+ToDo:
+increase database
+make better sentance constructor
+
 
 Examples:
 calculator check the numberless route
