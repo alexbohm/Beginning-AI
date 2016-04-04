@@ -1,4 +1,4 @@
-A simple sentance generator
+A simple sentence generator
 ToDo:
 increase database
 make better sentence constructor
