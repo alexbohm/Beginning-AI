@@ -1,6 +1,4 @@
-# Beginning-AI
-A simple sentance gen. (For now)
-Check Your Email
+A simple sentance generator
 
 Examples:
 calculator check the numberless route
