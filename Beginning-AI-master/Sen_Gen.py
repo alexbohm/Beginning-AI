@@ -17,10 +17,10 @@ class Sen_Gen(object):
 		global all_tags
 		for type_w in all_types:
 			with open("%s.txt" % (type_w), "r") as f:
-				all_types[type_w] = f.read().splitlines()
-			all_words.append(Word(all_types[type_w], type_w))
-	def add_words(self, number):
-		for a in range(number):
+				all_types[type_w] = f.read().splitlines() #This still needs to be fixed because
+			all_words.append(Word(all_types[type_w], type_w)) #in line 43 we got funkiness going on
+	def add_words(self, number):#					   with writing both the tag and the word
+		for a in range(number):#				   to the file
 			word = ''
 			word = str(raw_input("Word: "))
 			while word in all_words:
