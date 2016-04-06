@@ -1,3 +1,6 @@
+This is the work in progress, It may work with many bugs.
+
+
 A simple sentence generator
 ToDo:
 increase database
