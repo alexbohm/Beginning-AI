@@ -5,9 +5,13 @@ all_words = [] #not verbs
 all_types = {"noun":[], "adjective":[], "adverb":[], "conjunction":[], "preposition":[], "interjection":[]}
 
 class Word(object):
-	def __init__(self, word, type_):
+	def __init__(self, word,w_type,tags = {},forms = {}):
 		self.word = word
-		self.type_ = type_
+		self.type = w_type
+		self.tags = tags
+		self.forms = forms
+	def save(self):
+		return "%s:%s:%s:%s" % (self.word, self.type, str(self.tags), str(self.forms))
 
 class Verb(object):
 	def __init__(self, infinitive, past, present, future, tag):
