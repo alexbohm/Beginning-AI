@@ -66,15 +66,24 @@ class Sen_Gen(object):
 				break
 			if type_!="verb":
 				for type_w in all_types:
-						if type_ == type_w:
-							all_types[type_w].append()
-							with open("%s.txt" % (type_w), "a") as f:
-								f.write("%s\n" %(blue))
+					if type_ == type_w:
+						all_types[type_w].append()
+						with open("%s.txt" % (type_w), "a") as f:
+							f.write("%s\n" %(blue))
 			else:
 				with open("%s.txt" % ("verb"), "a") as f:
 					f.write("%s:%s:%s:%s:%s\n" % (blue.infinitive, blue.past, blue.present, blue.future, blue.tag))
-
-
+	def make_sen(self, amount=3):
+		i = 0
+		stc = ""
+		senl = []
+		while i<amount:
+			for e in range(0, len(self.structure)): //one of elements loaded in constructor containing strings/keys
+				types = all_types[self.structure[e]]
+				stc += " " + types[5] #make a random number here
+			senl.append(stc)
+			i+=1
+		return senl
 
 
 
