@@ -1,4 +1,5 @@
 from random import randrange
+import os
 class Word(object):
 	def __init__(self, word,w_type,forms = {}):
 		self.word = word
@@ -14,7 +15,8 @@ class Word(object):
 class Sen_Gen(object):
 	def __init__(self):
 		self.words = {"noun":{}, "adjective":{}, "verb":{}, "adverb":{}, "conjunction":{}, "preposition":{}, "interjection":{}}
-		with open("words.txt", "r") as f:
+		self.path = os.getcwd()
+		with open("%s/words.txt" % (self.path), "r") as f:
 			temp = f.read().splitlines()
 		for word in temp:
 			temp2 = word.split("|")
@@ -47,7 +49,7 @@ class Sen_Gen(object):
 					print "Aready in List"
 				word = str(raw_input("Word: "))
 		self.words[w_type][word] = Word(word, w_type, forms)
-		with open("words.txt", "a") as f:
+		with open("%s/words.txt" % (self.path), "a") as f:
 			f.write(self.words[w_type][word].save())
 	def random_word(self, w_type): #find random word with inputed type
 		rand_num = randrange(0, len(self.words[w_type]))
@@ -56,3 +58,5 @@ class Sen_Gen(object):
 			if i==rand_num:
 				return word
 			i += 1
+test = Sen_Gen()
+print test.path
