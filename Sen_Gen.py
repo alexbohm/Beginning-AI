@@ -13,7 +13,8 @@ class Word(object):
 			return "%s|%s\n" % (self.word, self.type)
 
 class Sen_Gen(object):
-	def __init__(self):
+	def __init__(self, structure=[]):
+		self.structure = structure
 		self.words = {"noun":{}, "adjective":{}, "verb":{}, "adverb":{}, "conjunction":{}, "preposition":{}, "interjection":{}}
 		self.path = os.getcwd()
 		with open("%s/words.txt" % (self.path), "r") as f:
@@ -21,7 +22,7 @@ class Sen_Gen(object):
 		for word in temp:
 			temp2 = word.split("|")
 			if temp2[1]=="verb":
-				self.words[temp2[1]][temp2[0]] = Word(temp2[0], temp2[1], eval(temp2[2]))
+				self.words["verb"][temp2[0]] = Word(temp2[0], "verb", eval(temp2[2]))
 			else:
 				self.words[temp2[1]][temp2[0]] = Word(temp2[0], temp2[1])
 	def add_word(self):
@@ -32,7 +33,6 @@ class Sen_Gen(object):
 			w_type = str(raw_input("Word Type: "))
 		forms = {}
 		if w_type == "verb":
-			forms = {}
 			forms['infinitive'] = raw_input("Infinitive: ")
 			while forms['infinitive'] in self.words[w_type]: #check if word is valid
 				if forms['infinitive'] in self.words[w_type]:
@@ -58,5 +58,26 @@ class Sen_Gen(object):
 			if i==rand_num:
 				return word
 			i += 1
-test = Sen_Gen()
-print test.path
+	def get_verb(self, infinitive, tense="present"):
+			return self.words["verb"][infinitive].forms[tense]
+	def make_sen(self, amount=3):
+		senl = []
+		for i in range(amount):
+			stc = ""
+			for e in self.structure:
+				if e == "verb":
+					stc+= "%s " % (self.get_verb(self.random_word(e)))
+				else:
+					stc+= "%s " % (self.random_word(e))
+			stc = stc[0:-1]
+			senl.append(stc)
+		return senl
+
+
+
+stru = ["adjective", "noun", "verb", "noun"] #, "adverb", "verb", "noun"
+simplesen = Sen_Gen(stru)
+print simplesen.make_sen()
+stru2 = ["adjective", "noun", "verb", "adjective", "noun", "verb"]
+weirdsen = Sen_Gen(stru2)
+print weirdsen.make_sen()
