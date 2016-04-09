@@ -49,7 +49,7 @@ class Sen_Gen(object):
 		self.words[w_type][word] = Word(word, w_type, forms)
 		with open("words.txt", "a") as f:
 			f.write(self.words[w_type][word].save())
-	def random_word(self, w_type):
+	def random_word(self, w_type): #find random word with inputed type
 		rand_num = randrange(0, len(self.words[w_type]))
 		i = 0
 		for word in self.words[w_type]:
