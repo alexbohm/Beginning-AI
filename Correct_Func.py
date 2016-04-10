@@ -8,8 +8,7 @@ def correct(self):
 		oforms['past'] = raw_input("Past Tense: ")
 		oforms['present'] = raw_input("Present Tense: ")
 		oforms['future'] = raw_input("Future Tense: ")
-		i = 0
-		referendum = ['infinitive','past','present','future']
+		referendum, i = ['infinitive','past','present','future'], 0
 		for word_ in oforms:
 			if word_!='a':
 				with open('words.txt', '') as inF:
@@ -23,4 +22,3 @@ def correct(self):
 		print "Think again.\n"
 
 #DO NOT DELETE
-#THIS WILL BE VERY USEFUL LATER
