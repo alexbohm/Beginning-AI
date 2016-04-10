@@ -14,7 +14,7 @@ def correct(self):
 				with open('words.txt', '') as inF:
 					for line in inF:
 						if word_ in line:
-							line = line.replace(self.words["verb"][word].forms[oforms[referendum[i]]], word_)
+							line = line.replace(self.words["verb"][word].forms[oforms[referendum[i]]], word_) #Incorrect, apparently
 				self.words["verb"][word].forms[oforms[referendum[i]]] = word_
 			i+=1
 	else:
