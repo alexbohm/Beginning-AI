@@ -60,24 +60,25 @@ class Sen_Gen(object):
 			i += 1
 	def get_verb(self, infinitive, tense="present"):
 			return self.words["verb"][infinitive].forms[tense]
-	def make_sen(self, amount=3):
+	def make_sen(self, amount=3, structure=[]):
+		if not len(structure) ==0:
+			self.structure = structure
 		senl = []
 		for i in range(amount):
 			stc = ""
 			for e in self.structure:
 				if e == "verb":
 					stc+= "%s " % (self.get_verb(self.random_word(e)))
-				else:
+				elif e in self.words:
 					stc+= "%s " % (self.random_word(e))
+				else:
+					stc+= "%s " % (e)
 			stc = stc[0:-1]
 			senl.append(stc)
 		return senl
 
 
-
 stru = ["adjective", "noun", "verb", "noun"] #, "adverb", "verb", "noun"
 simplesen = Sen_Gen(stru)
-print simplesen.make_sen()
-stru2 = ["adjective", "noun", "verb", "adjective", "noun", "verb"]
-weirdsen = Sen_Gen(stru2)
-print weirdsen.make_sen()
+print simplesen.make_sen(1)
+print simplesen.make_sen(1,["adjective", "noun", "verb", "adjective", "noun", "verb"])
