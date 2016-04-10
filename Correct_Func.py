@@ -3,15 +3,18 @@ def correct(self):
 		word = raw_input("Old Word: ")
 		if w_type == "verb":
 			print "Enter 'a' if word is correct"
-			forms = {}
-			forms['infinitive'] = raw_input("Infinitive: ")
-			forms['past'] = raw_input("Past Tense: ")
-			forms['present'] = raw_input("Present Tense: ")
-			forms['future'] = raw_input("Future Tense: ")
+			oforms = {}
+			oforms['infinitive'] = raw_input("Infinitive: ")
+			oforms['past'] = raw_input("Past Tense: ")
+			oforms['present'] = raw_input("Present Tense: ")
+			oforms['future'] = raw_input("Future Tense: ")
 			i = 0
-			for word_ in forms:
-				if word!=a:
-					self.words["verb"][word][i] = word_
+			referendum = {0:'infinitive',1:'past',2:'present',3:'future'}
+			for word_ in oforms:
+				if word_!='a':
+					#1. Find word in words.txt
+					#2. Replace wrong form with correct form in words.txt
+					self.words["verb"][word].forms[oforms[referendum[i]]] = word_
 				i+=1
 		else:
 			print "You want to correct something that has no members.\n"
