@@ -1,5 +1,5 @@
 from Tkinter import *
-class AI(object):
+class GUI(object):
 	def __init__(self):
 		self.win = Tk()
 		self.win.geometry('{}x{}'.format(220, 150))
@@ -9,8 +9,12 @@ class AI(object):
 		self.main_ent.grid(row=6, column=0)
 		ent_but = Button(self.win, text="Say", command=self.ent_callback)
 		ent_but.grid(row=6, column=1)
-		self.ent_hist = ["", "", "", ""]
-		self.rep_hist = ["", "", "", ""]
+		self.ent_hist = []#["", "", "", ""]
+		self.rep_hist = []#["", "", "", ""]
+		for ind in range(0,4):
+			self.ent_hist.append("")
+			self.rep_hist.append("")
+		print self.ent_hist, self.rep_hist
 		self.hist = {
 			0:Label(self.win, text=self.ent_hist[0]),
 			1:Label(self.win, text=self.rep_hist[0]),
@@ -23,16 +27,17 @@ class AI(object):
 		self.win.mainloop()
 	def ent_callback(self):
 		user = self.main_ent.get()
-		self.main_ent.delete(0, END)
-		self.ent_hist[3] = user
-		self.rep_hist[3] = "reply"#reply from ai
-		for ind in range(0,3):
-			self.ent_hist[ind] = self.ent_hist[ind+1]
-			self.rep_hist[ind] = self.rep_hist[ind+1]
-		self.hist[0].configure(text=self.ent_hist[0]) # will turn into for loop
-		self.hist[1].configure(text=self.rep_hist[0])
-		self.hist[2].configure(text=self.ent_hist[1])
-		self.hist[3].configure(text=self.rep_hist[1])
-		self.hist[4].configure(text=self.ent_hist[2])
-		self.hist[5].configure(text=self.rep_hist[2])			
-AI()
+		if user != "":
+			self.main_ent.delete(0, END)
+			self.ent_hist[3] = user
+			self.rep_hist[3] = "reply" #reply from ai
+			for ind in range(0,3):
+				self.ent_hist[ind] = self.ent_hist[ind+1]
+				self.rep_hist[ind] = self.rep_hist[ind+1]
+			self.hist[0].configure(text=self.ent_hist[0]) # will turn into for loop if possible
+			self.hist[1].configure(text=self.rep_hist[0])
+			self.hist[2].configure(text=self.ent_hist[1])
+			self.hist[3].configure(text=self.rep_hist[1])
+			self.hist[4].configure(text=self.ent_hist[2])
+			self.hist[5].configure(text=self.rep_hist[2])			
+GUI()
