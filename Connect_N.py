@@ -1,5 +1,6 @@
 from random import randrange
 import Sen_Gen as sg
+from os import getcwd
 class Link (object):
 	def __init__(self, node1, node2, charge_deduc=1):
 		self.node1 = node1 #word1
@@ -77,7 +78,7 @@ y = sg.Word("","")
 for e in blue:
 	for i in e:
 		nodes.append(sg.Word(i, e))
-with open("links_save.py", "r") as f: # save read in
+with open("%s/links_save.py" % (getcwd()), "r") as f: # save read in
 	bob = f.read().splitlines()
 for line in bob:
 	eval(line)

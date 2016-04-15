@@ -1,5 +1,5 @@
 from random import randrange
-import os
+from os import getcwd
 class Word(object):
 	def __init__(self, word,w_type,forms = {}):
 		self.word = word
@@ -13,7 +13,7 @@ class Word(object):
 			return "%s|%s\n" % (self.word, self.type)
 
 words = {"noun":{}, "adjective":{}, "verb":{}, "adverb":{}, "conjunction":{}, "preposition":{}, "interjection":{}}
-with open("%s/words.txt" % (os.getcwd()), "r") as f:
+with open("%s/words.txt" % (getcwd()), "r") as f:
 	temp = f.read().splitlines()
 for word in temp:
 	temp2 = word.split("|")
