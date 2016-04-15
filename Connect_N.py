@@ -1,7 +1,7 @@
 from random import randrange
 import Sen_Gen as sg
 from os import getcwd
-class Link (object):
+class Link(object):
 	def __init__(self, node1, node2, charge_deduc=1):
 		self.node1 = node1 #word1
 		self.node2 = node2 #word2
@@ -10,6 +10,9 @@ class Link (object):
 		return (charge - self.cd) #charge only goes 10 links
 		#that way, if the starting word of the network is "ridiculous", it doesn't end up on the other end
 		#of the network saying "mommy"
+	def save(self):
+		with open("%s/links_save.py", "a") as f:
+			f.writeline("add_link(%s, %s, %d)" % ("sg.words['%s']['%s']" % (self.node1.type, self.node1.word), "sg.words['%s']['%s']" % (self.node2.type, self.node2.word), self.cd))
 
 links = []
 
