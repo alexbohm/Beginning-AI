@@ -1,3 +1,4 @@
+from random import randrange
 import Sen_Gen as sg
 class Link (object):
 	def __init__(self, node1, node2, charge_deduc=1):
@@ -16,23 +17,54 @@ class Network(object):
 		self.nodes = nodes #just words--not sure whether I have need the nodes
 		self.links = links #essential for the follow function
 		self.chg = 10
+	def return_node(self):
+		randome = random.randint(0,1)
+		if randome == 1:
+			return node2
+		else:
+			return node1
 	def follow(self, word1):
-		crawled, self.path = [], [] #crawled will become useful later
+		self.path, old_link = [], []
 		for e in links:				#path is the sentence
-			if e.node1==word1:
-				old_link = e
-				crawled.append(e)
-		self.path.append(old_link.node1)
+			if e.node1.word==word1.word:
+				old_link.append(e)
+		#self.path.extend(old_link)
 		i = 0
-		while self.chg>0:
-			for e in links: #The problem lies here
-				if e.node1 == old_link.node2 and e not in crawled: #check second element of link
-					self.path.append(e.node1)
-					self.chg = e.charge_reduc(self.chg) #make sure the thought only goes so far
-					old_link = e #used for next iteration
-					crawled.append(e)
-				elif links[-1] == e:
-					self.chg = self.chg - 1
+		current = []
+		big = [] #actually lists within list, therefore "big"
+		restart = True
+		for e in old_link:
+			big.append(current)
+			current = []
+			o = e
+			current.append(o)
+			restart = True
+			while restart:
+				restart = False
+				for li in links:
+					if o.node2.word == li.node1.word and li not in current:
+						restart = True
+						o = li
+						current.append(o)
+						break
+		big.append(current)
+		holder = []
+		for e in big:
+			if e == []:
+				big.remove(e)
+		for e in big:
+			print "New Branch: "
+			for i in e:
+				if i.node1.word not in holder:
+					holder.append(i.node1.word)
+					print i.node1.word
+				if i.node2.word not in holder:
+					holder.append(i.node2.word)
+					print i.node2.word
+			holder=[]
+
+
+				
 
 
 def add_link(one, two, charge_deduc=1):
@@ -98,10 +130,7 @@ add_link(owl, robin, 2)
 add_link(apple, horse, 1.25)
 add_link(eat, apple)
 big_net = Network(nodes, links)
-big_net.follow(apple)
-for e in big_net.path:
-	print e.word
-sentence_sequence.append(big_net.path)
+big_net.follow(eat)
 
 #in this case, the path is the sentence
 #by adding connections, we construct a network in big_net
@@ -110,7 +139,9 @@ sentence_sequence.append(big_net.path)
 #do not fix anything.
 #this is officially my first machine learning network.
 
-
+for e in big_net.path:
+	print e.node1.word
+sentence_sequence.append(big_net.path)
 
 
 
