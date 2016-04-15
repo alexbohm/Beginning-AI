@@ -11,8 +11,8 @@ class Link(object):
 		#that way, if the starting word of the network is "ridiculous", it doesn't end up on the other end
 		#of the network saying "mommy"
 	def save(self):
-		with open("%s/links_save.py", "a") as f:
-			f.writeline("add_link(%s, %s, %d)" % ("sg.words['%s']['%s']" % (self.node1.type, self.node1.word), "sg.words['%s']['%s']" % (self.node2.type, self.node2.word), self.cd))
+		with open("%s/links_save.py" % (getcwd()), "a") as f:
+			f.write("add_link(%s, %s, %d)\n" % ("sg.words['%s']['%s']" % (self.node1.type, self.node1.word), "sg.words['%s']['%s']" % (self.node2.type, self.node2.word), self.cd))
 
 links = []
 
@@ -33,7 +33,7 @@ class Network(object):
 			if e.node1.word==word1.word:
 				old_link.append(e)
 		#self.path.extend(old_link)
-		i = 0
+		#i = 0
 		current = []
 		big = [] #actually lists within list, therefore "big"
 		restart = True
@@ -67,17 +67,12 @@ class Network(object):
 					print i.node2.word
 			holder=[]
 
-
-				
-
-
 def add_link(one, two, charge_deduc=1):
 	links.append(Link(one, two, charge_deduc))
-
 blue = sg.words
 nodes = []
 sentence_sequence = [[]]
-y = sg.Word("","")
+#y = sg.Word("","")
 for e in blue:
 	for i in e:
 		nodes.append(sg.Word(i, e))
@@ -95,7 +90,6 @@ big_net.follow(sg.words["verb"]["to eat"])
 #the sentence sequence allows us to store the sentences
 #do not fix anything.
 #this is officially my first machine learning network.
-
 for e in big_net.path:
 	print e.node1.word
 sentence_sequence.append(big_net.path)
