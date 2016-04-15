@@ -1,5 +1,5 @@
 import Sen_Gen as sg
-import Connect_N
+import Connect_N as cn
 Connect_N.add_link(sg.words["noun"]["pie"], sg.words["verb"]["to like"]) #adding words that are linked together. This will become easer later on
 Connect_N.add_link(sg.words["verb"]["to like"], sg.words["verb"]["to eat"])
 Connect_N.add_link(sg.words["noun"]["robin"], sg.words["noun"]["stick"], 2)
