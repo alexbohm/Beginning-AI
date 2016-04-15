@@ -77,60 +77,38 @@ y = sg.Word("","")
 for e in blue:
 	for i in e:
 		nodes.append(sg.Word(i, e))
-pie = sg.words["noun"]["pie"]
-likes = sg.words["verb"]["to like"]
-eat = sg.words["verb"]["to eat"]
-food = sg.words["noun"]["food"]
-juice = sg.words["noun"]["juice"]
-cake = sg.words["noun"]["cake"]
-apple = sg.words["noun"]["apple"]
-banana = sg.words["noun"]["banana"]
-corn = sg.words["noun"]["corn"]
-milk = sg.words["noun"]["milk"]
-pear = sg.words["noun"]["pear"]
-water = sg.words["noun"]["water"]
-bread = sg.words["noun"]["bread"]
-goose = sg.words["noun"]["goose"]
-horse = sg.words["noun"]["horse"]
-kitten = sg.words["noun"]["kitten"]
-loaf = sg.words["noun"]["loaf"]
-owl = sg.words["noun"]["owl"]
-rabbit = sg.words["noun"]["rabbit"]
-robin = sg.words["noun"]["robin"]
-song = sg.words["noun"]["song"]
-rainstorm = sg.words["noun"]["rainstorm"]
-sound = sg.words["noun"]["sound"]
-stick = sg.words["noun"]["sound"]
-wood = sg.words["noun"]["wood"]
-add_link(pie, likes) #adding words that are linked together. This will become easer later on
-add_link(likes, eat)
-add_link(robin, stick, 2)
-add_link(stick, wood)
-add_link(wood, water, 2)
-add_link(eat, corn, 1.5)
-add_link(rainstorm, water, 1.5)
-add_link(sound, rainstorm)
-add_link(song, sound)
-add_link(horse, rainstorm)
-add_link(eat, food)
-add_link(food, pie)
-add_link(food, cake)
-add_link(apple, juice)
-add_link(apple, banana)
-add_link(juice, milk, 3)
-add_link(milk, water)
-add_link(pear, juice, 2)
-add_link(water, bread)
-add_link(bread, cake, 1.5)
-add_link(loaf, bread)
-add_link(bread, loaf)
-add_link(loaf, corn, 3)
-add_link(robin, song, 1.5)
-add_link(owl, robin, 2)
-add_link(apple, horse, 1.25)
-add_link(eat, apple)
+import links_save as l_s # runs save file
+
+"""add_link(sg.words["noun"]["pie"], sg.words["verb"]["to like"]) #adding words that are linked together. This will become easer later on
+add_link(sg.words["verb"]["to like"], sg.words["verb"]["to eat"])
+add_link(sg.words["noun"]["robin"], sg.words["noun"]["stick"], 2)
+add_link(sg.words["noun"]["stick"], sg.words["noun"]["wood"])
+add_link(sg.words["noun"]["wood"], sg.words["noun"]["water"], 2)
+add_link(sg.words["verb"]["to eat"], sg.words["noun"]["corn"], 1.5)
+add_link(sg.words["noun"]["rainstorm"], sg.words["noun"]["water"], 1.5)
+add_link(sg.words["noun"]["sound"], sg.words["noun"]["rainstorm"])
+add_link(sg.words["noun"]["song"], sg.words["noun"]["sound"])
+add_link(sg.words["noun"]["horse"], sg.words["noun"]["rainstorm"])
+add_link(sg.words["verb"]["to eat"], sg.words["noun"]["food"])
+add_link(sg.words["noun"]["food"], sg.words["noun"]["pie"])
+add_link(sg.words["noun"]["food"], sg.words["noun"]["cake"])
+add_link(sg.words["noun"]["apple"], sg.words["noun"]["juice"])
+add_link(sg.words["noun"]["apple"], sg.words["noun"]["banana"])
+add_link(sg.words["noun"]["juice"], sg.words["noun"]["milk"], 3)
+add_link(sg.words["noun"]["milk"], sg.words["noun"]["water"])
+add_link(sg.words["noun"]["pear"], sg.words["noun"]["juice"], 2)
+add_link(sg.words["noun"]["water"], sg.words["noun"]["bread"])
+add_link(sg.words["noun"]["bread"], sg.words["noun"]["cake"], 1.5)
+add_link(sg.words["noun"]["loaf"], sg.words["noun"]["bread"])
+add_link(sg.words["noun"]["bread"], sg.words["noun"]["loaf"])
+add_link(sg.words["noun"]["loaf"], sg.words["noun"]["corn"], 3)
+add_link(sg.words["noun"]["robin"], sg.words["noun"]["song"], 1.5)
+add_link(sg.words["noun"]["owl"], sg.words["noun"]["robin"], 2)
+add_link(sg.words["noun"]["apple"], sg.words["noun"]["horse"], 1.25)
+add_link(sg.words["verb"]["to eat"], sg.words["noun"]["apple"])"""
+
 big_net = Network(nodes, links)
-big_net.follow(eat)
+big_net.follow(sg.words["verb"]["to eat"])
 
 #in this case, the path is the sentence
 #by adding connections, we construct a network in big_net
@@ -142,20 +120,3 @@ big_net.follow(eat)
 for e in big_net.path:
 	print e.node1.word
 sentence_sequence.append(big_net.path)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
