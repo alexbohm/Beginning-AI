@@ -77,35 +77,10 @@ y = sg.Word("","")
 for e in blue:
 	for i in e:
 		nodes.append(sg.Word(i, e))
-import links_save as l_s # runs save file
-
-"""add_link(sg.words["noun"]["pie"], sg.words["verb"]["to like"]) #adding words that are linked together. This will become easer later on
-add_link(sg.words["verb"]["to like"], sg.words["verb"]["to eat"])
-add_link(sg.words["noun"]["robin"], sg.words["noun"]["stick"], 2)
-add_link(sg.words["noun"]["stick"], sg.words["noun"]["wood"])
-add_link(sg.words["noun"]["wood"], sg.words["noun"]["water"], 2)
-add_link(sg.words["verb"]["to eat"], sg.words["noun"]["corn"], 1.5)
-add_link(sg.words["noun"]["rainstorm"], sg.words["noun"]["water"], 1.5)
-add_link(sg.words["noun"]["sound"], sg.words["noun"]["rainstorm"])
-add_link(sg.words["noun"]["song"], sg.words["noun"]["sound"])
-add_link(sg.words["noun"]["horse"], sg.words["noun"]["rainstorm"])
-add_link(sg.words["verb"]["to eat"], sg.words["noun"]["food"])
-add_link(sg.words["noun"]["food"], sg.words["noun"]["pie"])
-add_link(sg.words["noun"]["food"], sg.words["noun"]["cake"])
-add_link(sg.words["noun"]["apple"], sg.words["noun"]["juice"])
-add_link(sg.words["noun"]["apple"], sg.words["noun"]["banana"])
-add_link(sg.words["noun"]["juice"], sg.words["noun"]["milk"], 3)
-add_link(sg.words["noun"]["milk"], sg.words["noun"]["water"])
-add_link(sg.words["noun"]["pear"], sg.words["noun"]["juice"], 2)
-add_link(sg.words["noun"]["water"], sg.words["noun"]["bread"])
-add_link(sg.words["noun"]["bread"], sg.words["noun"]["cake"], 1.5)
-add_link(sg.words["noun"]["loaf"], sg.words["noun"]["bread"])
-add_link(sg.words["noun"]["bread"], sg.words["noun"]["loaf"])
-add_link(sg.words["noun"]["loaf"], sg.words["noun"]["corn"], 3)
-add_link(sg.words["noun"]["robin"], sg.words["noun"]["song"], 1.5)
-add_link(sg.words["noun"]["owl"], sg.words["noun"]["robin"], 2)
-add_link(sg.words["noun"]["apple"], sg.words["noun"]["horse"], 1.25)
-add_link(sg.words["verb"]["to eat"], sg.words["noun"]["apple"])"""
+with open("links_save.py", "r") as f: # save read in
+	bob = f.read().splitlines()
+for line in bob:
+	eval(line)
 
 big_net = Network(nodes, links)
 big_net.follow(sg.words["verb"]["to eat"])
