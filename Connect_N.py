@@ -93,7 +93,7 @@ for e in blue:
 with open("%s/links_save.py" % (getcwd()), "r") as f: # save read in
 	bob = f.read().splitlines()
 for line in bob:
-	eval("add_link(%s)" % (line))
+	eval("add_link(%s)" % (line)) #reduce number of char in file
 
 big_net = Network(nodes, links)
 big_net.follow(sg.words["verb"]["to eat"])
