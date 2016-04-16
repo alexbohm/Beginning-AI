@@ -517,7 +517,7 @@ slimy|adjective
 cynical|adjective
 fluffy|adjective
 plausible|adjective
-nasty |adjective
+nasty|adjective
 tender|adjective
 changeable|adjective
 smiling|adjective

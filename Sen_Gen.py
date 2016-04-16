@@ -1,26 +1,33 @@
 from random import randrange
 from os import getcwd
+import fileinput
 class Word(object):
-	def __init__(self, word,w_type,forms = {}):
+	def __init__(self, line, word,w_type,forms = {}):
+		self.line = line
 		self.word = word
 		self.type = w_type
 		if w_type == "verb":
 			self.forms = forms
-	def save(self):
-		if self.type == "verb":
-			return "%s|%s|%s\n" % (self.word, self.type, str(self.forms))
-		else:
-			return "%s|%s\n" % (self.word, self.type)
-
 words = {"noun":{}, "adjective":{}, "verb":{}, "adverb":{}, "conjunction":{}, "preposition":{}, "interjection":{}}
-with open("%s/words.txt" % (getcwd()), "r") as f:
-	temp = f.read().splitlines()
-for word in temp:
-	temp2 = word.split("|")
-	if temp2[1]=="verb":
-		words["verb"][temp2[0]] = Word(temp2[0], "verb", eval(temp2[2]))
+def save():
+	global words
+	with open("%s/words_new.txt" % (getcwd()), "w") as f:
+		for w_type in words:
+			if w_type in words:
+				for cla in w_type:
+					if w_type =="verb":
+						f.write("%s|%s|%s\n" % (words[w_type][cla].word, words[w_type][cla].type, str(words[w_type][cla].forms)))
+					else:
+						f.write("%s|%s\n" % (words[w_type][cla].word, words[w_type][cla].type))
+
+for line in fileinput.input("%s/words.txt" % (getcwd())):
+	temp = line.strip("\n").split("|")
+	if temp[1]=="verb":
+		words["verb"][temp[0]] = Word(fileinput.filelineno(),temp[0], "verb", eval(temp[2]))
 	else:
-		words[temp2[1]][temp2[0]] = Word(temp2[0], temp2[1])
+		words[temp[1]][temp[0]] = Word(fileinput.filelineno(),temp[0], temp[1])
+fileinput.close()
+
 class Sen_Gen(object):
 	def __init__(self, structure=[]):
 		self.structure = structure
@@ -49,3 +56,4 @@ class Sen_Gen(object):
 			stc = stc[0:-1]
 			senl.append(stc)
 		return senl
+save()
