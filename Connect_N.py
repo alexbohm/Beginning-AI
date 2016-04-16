@@ -33,12 +33,18 @@ class Network(object):
 			if e.node1.word==word1.word:
 				old_link.append(e)
 		#self.path.extend(old_link)
-		#i = 0
+		i = 0
 		current = []
 		big = [] #actually lists within list, therefore "big"
+		old_current = []
 		restart = True
 		for e in old_link:
-			big.append(current)
+			cont = True
+			for k in big:
+				if k==current:
+					cont = False
+			if cont:
+				big.append(current)
 			current = []
 			o = e
 			current.append(o)
@@ -52,12 +58,18 @@ class Network(object):
 						current.append(o)
 						break
 		big.append(current)
-		holder = []
+		holder, sizes = [], []
 		for e in big:
 			if e == []:
 				big.remove(e)
+			for i in e:
+				if i == "":
+					e.remove(i)
 		for e in big:
-			print "New Branch: "
+			b = 0
+			b = len(e)
+			print "New Branch of length %x: " %(b)
+			sizes.append(b)
 			for i in e:
 				if i.node1.word not in holder:
 					holder.append(i.node1.word)
@@ -65,7 +77,9 @@ class Network(object):
 				if i.node2.word not in holder:
 					holder.append(i.node2.word)
 					print i.node2.word
-			holder=[]
+		sizes.sort()
+		sizes.reverse()
+		print sizes
 
 def add_link(one, two, charge_deduc=1):
 	links.append(Link(one, two, charge_deduc))
