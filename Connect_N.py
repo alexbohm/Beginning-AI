@@ -1,4 +1,4 @@
-from random import randint
+from random import randrange
 import Sen_Gen as sg
 from os import getcwd
 class Link(object):
@@ -10,15 +10,10 @@ class Link(object):
 		return (charge - self.cd) #charge only goes 10 links
 		#that way, if the starting word of the network is "ridiculous", it doesn't end up on the other end
 		#of the network saying "mommy"
-	def return_node(self):
-		randome = randint(0,1)
-		if randome == 1:
-			return self.node2
-		else:
-			return self.node1
 	def save(self):
 		with open("%s/links_save.py" % (getcwd()), "a") as f:
 			f.write("%s, %s, %d\n" % ("sg.words['%s']['%s']" % (self.node1.type, self.node1.word), "sg.words['%s']['%s']" % (self.node2.type, self.node2.word), self.cd))
+		return "Saved"
 
 links = []
 
@@ -27,7 +22,12 @@ class Network(object):
 		self.nodes = nodes #just words--not sure whether I have need the nodes
 		self.links = links #essential for the follow function
 		self.chg = 10
-
+	def return_node(self):
+		randome = random.randint(0,1)
+		if randome == 1:
+			return node2
+		else:
+			return node1
 	def follow(self, word1):
 		self.path, old_link = [], []
 		for e in links:				#path is the sentence
@@ -66,6 +66,7 @@ class Network(object):
 				if i == "":
 					e.remove(i)
 		for e in big:
+			
 			for i in e:
 				if i.node1.word not in holder:
 					holder.append(i.node1.word)
