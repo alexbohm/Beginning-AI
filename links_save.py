@@ -26,3 +26,10 @@ sg.words["noun"]["owl"], sg.words["noun"]["robin"], 2
 sg.words["noun"]["apple"], sg.words["noun"]["horse"], 1.25
 sg.words["verb"]["to eat"], sg.words["noun"]["apple"]
 sg.words['noun']['food'], sg.words['noun']['grape'], 3
+sg.words['noun']['textbook'], sg.words['adjective']['heavy'], 1
+sg.words['noun']['textbook'], sg.words['adjective']['big'], 1
+sg.words['noun']['food'], sg.words['noun']['melon'], 1
+sg.words['noun']['food'], sg.words['noun']['pizza'], 1
+sg.words['noun']['melon'], sg.words['noun']['grape'], 1
+sg.words['noun']['candy'], sg.words['noun']['food'], 1
+sg.words['noun']['orange'], sg.words['noun']['food'], 1
