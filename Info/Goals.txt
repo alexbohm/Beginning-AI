@@ -6,4 +6,4 @@ Goals.txt
 	Make networks and sub_networks to create better oversight
 	Utilize self.chg to come up with the paths of least resistance
 3. GUI tweaks
-4. Find a way to market? Application on desktop?
+4. Application to Desktop
