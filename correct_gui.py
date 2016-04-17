@@ -4,7 +4,7 @@ class Add_Word(object):
 	def __init__(self):
 		self.types = ["noun", "adjective", "verb", "adverb", "conjunction", "preposition", "interjection"]
 		self.win = Tk()
-		self.win.title("Correct Word")
+		self.win.title("Correct Word or Add Word")
 		self.win.geometry('{}x{}'.format(340, 150))
 		self.type_w = StringVar(self.win)
 		self.type_w.set(self.types[0])

@@ -35,6 +35,7 @@ def Save():
 		else:
 			charge = float(ch.get())
 		cn.add_link(sg.words[type1][word1], sg.words[type2][word2], charge)
+		cn.links[-1].save()
 		#print cn.links[-1].node1.word, cn.links[-1].node2.word
 		print "linked '%s' with '%s'" % (word1, word2)
 		ent[1].focus_set()
