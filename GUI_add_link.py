@@ -1,6 +1,7 @@
 from Tkinter import Entry, END, Tk, Button, Label
 import Sen_Gen as sg
 import Connect_N as cn
+import correct_gui as cg
 win = Tk()
 win.title("New Link")
 slbl = {
@@ -21,10 +22,6 @@ ty = {
 	2:Entry(win, bg="grey")
 }
 
-say_out= Label(win, text="")
-say_out.grid(row=3, column=2)
-def say(text):
-	say_out.configure(text=text)
 def Save():
 	#check if words are in Sen_Gen
 	word1 = ent[1].get()
@@ -38,12 +35,11 @@ def Save():
 		else:
 			charge = float(ch.get())
 		cn.add_link(sg.words[type1][word1], sg.words[type2][word2], charge)
-		say(cn.links[-1].save())
 		#print cn.links[-1].node1.word, cn.links[-1].node2.word
-		say("linked '%s' with '%s'" % (word1, word2))
+		print "linked '%s' with '%s'" % (word1, word2)
 		ent[1].focus_set()
 	else:
-		say("Empty Text")
+		print "Empty Text"
 def check(num):
 	word = ent[num].get()
 	w_type = ty[num].get()
@@ -54,9 +50,10 @@ def check(num):
 		ent[num].configure(bg="red")
 		ty[num].configure(bg="red")
 		if w_type not in sg.words:
-			say("invalid type")
+			print "invalid type"
 		else:
-			say("word not in list")
+			cg.Add_Word()
+			cg.exit_save()
 
 
 

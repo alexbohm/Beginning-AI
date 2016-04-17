@@ -25,3 +25,4 @@ sg.words["noun"]["robin"], sg.words["noun"]["song"], 1.5
 sg.words["noun"]["owl"], sg.words["noun"]["robin"], 2
 sg.words["noun"]["apple"], sg.words["noun"]["horse"], 1.25
 sg.words["verb"]["to eat"], sg.words["noun"]["apple"]
+sg.words['noun']['food'], sg.words['noun']['grape'], 3

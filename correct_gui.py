@@ -1,4 +1,4 @@
-from Tkinter import Button, Label, END, Entry, Tk, StringVar, OptionMenu
+from Tkinter import Button, Label, END, Entry, Tk, StringVar, OptionMenu, Toplevel
 import Sen_Gen
 class Add_Word(object):
 	def __init__(self):
@@ -86,5 +86,5 @@ class Add_Word(object):
 				else:
 					Sen_Gen.words[w_type][ind] = Sen_Gen.Word(ind, w_type)
 				self.word_edit.delete(0, END)
-Add_Word()
-Sen_Gen.save()
+def exit_save():
+	Sen_Gen.save()
