@@ -1,0 +1,9 @@
+Goals.txt
+1. Increase database (words/types, and links)
+2. Connect_N revision:
+	Clean-up!
+	Make sure that all possible paths are accounted for
+	Make networks and sub_networks to create better oversight
+	Utilize self.chg to come up with the paths of least resistance
+3. GUI tweaks
+4. Find a way to market? Application on desktop?
