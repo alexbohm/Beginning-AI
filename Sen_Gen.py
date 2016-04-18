@@ -3,7 +3,6 @@ from os import getcwd
 import fileinput
 class Word(object):
 	def __init__(self, word,w_type,forms = {}):
-		self.line = line
 		self.word = word
 		self.type = w_type
 		if w_type == "verb":
