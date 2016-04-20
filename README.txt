@@ -1,5 +1,3 @@
 This is the work in progress, It may work with many bugs.
 
-ToDo:
-increase database with new organization style
-make better sentence constructor
+To-Do can be found under info, and is a list of goals.
