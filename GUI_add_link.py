@@ -1,6 +1,5 @@
 from Tkinter import Entry, END, Tk, Button, Label
 import Sen_Gen as sg
-import Connect_N as cn
 import correct_gui as cg
 win = Tk()
 win.title("New Link")
@@ -8,19 +7,16 @@ slbl = {
 	0:Label(win),
 	1:Label(win, text="Node 1"),
 	2:Label(win, text="Node 2"),
-	3:Label(win, text="Charge")
-}
+	3:Label(win, text="Charge")}
 
 ent= {
 	0:Label(win, text="Index"),
 	1:Entry(win, bg="grey"),
-	2:Entry(win, bg="grey")
-}
+	2:Entry(win, bg="grey")}
 ty = {
 	0:Label(win, text="Type"),
 	1:Entry(win, bg="grey"),
-	2:Entry(win, bg="grey")
-}
+	2:Entry(win, bg="grey")}
 
 def Save():
 	#check if words are in Sen_Gen
@@ -34,11 +30,14 @@ def Save():
 			charge = 1
 		else:
 			charge = float(ch.get())
-		cn.add_link(sg.words[type1][word1], sg.words[type2][word2], charge)
-		cn.links[-1].save()
-		#print cn.links[-1].node1.word, cn.links[-1].node2.word
-		print "linked '%s' with '%s'" % (word1, word2)
+		sg.words[type1][word1].links[word2] = charge
+		sg.save()
+		print "linked '%s' with '%s' with a charge of %d" % (word1, word2, charge)
 		ent[1].focus_set()
+		for num in range(1,3):
+			ent[num].configure(bg="grey")
+			ty[num].configure(bg="grey")
+			ent[num].delete(0, END)
 	else:
 		print "Empty Text"
 def check(num):
@@ -55,8 +54,6 @@ def check(num):
 		else:
 			cg.Add_Word()
 			cg.exit_save()
-
-
 
 sv = Button(win, text="Save", command= lambda: Save())
 ch = Entry(win)

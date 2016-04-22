@@ -48,4 +48,4 @@ class Sen_Gen(object):
 			stc = stc[0:-1]
 			senl.append(stc)
 		return senl
-save()
+#save()
