@@ -9,6 +9,9 @@ class Word(object):
 		self.links = links
 		if w_type == "verb":
 			self.forms = forms
+	def add_link(self, word, charge):
+		if word not in self.links[word]:
+			self.links[word] = charge
 words = {"noun":{}, "adjective":{}, "verb":{}, "adverb":{}, "conjunction":{}, "preposition":{}, "interjection":{}}
 def save():
 	with open("%s/words.txt" % (getcwd()), "w") as f:
