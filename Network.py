@@ -3,6 +3,24 @@ import Sen_Gen as sg
 from os import getcwd
 import fileinput
 
+class Tuple_Dict(object):
+	def __init__(self):
+		self.keys = []
+		self.list = ()
+	def add_to(self, key, value):
+		self.keys.append(key)
+		self.keys.append(value)
+	def at_k(self, key):
+		a = self.keys.index(key)
+		return self.keys[a]
+	def at_v(self, value):
+		for e in self.list:
+			for i in e:
+				if i==value:
+					good_one = e
+		place = self.list.index(good_one)
+		return key[place]
+
 class Link(object):
 	def __init__(self, node1, node2, cd):
 		self.node1 = node1
@@ -44,10 +62,36 @@ class Word(object):
 			if e.node1 == word:
 				self.local_links.append(e)
 		self.word_out.append(word)
-#make a tree class
 
+sub_net_uni = {}
+sub_net_multi = {}
 
+class Sub_Net(object):
+	def __init__(self, name, w_type="misc", nodes=[]):
+		self.name = name
+		self.w_type = w_type
+		self.nodes = nodes
+		sub_net_uni[name] = self
+	def add_to_nodes(node):
+		self.nodes.append(node)
 
+class Mega_Net(object):
+	def __init__(self, name, w_type="misc", nodes1=Sub_Net(""), nodes2=Sub_Net("")):
+		self.name = name
+		self.w_type = w_type
+		self.all_nodes_lists = Tuple_Dict()
+		if nodes1:
+			self.all_nodes_lists.add_to(nodes1.name, nodes1)
+		if nodes2:
+			self.all_nodes_lists.add_to(nodes2.name, nodes2)
+	def add_nodes_list(self, nl=Sub_Net("")):
+		self.all_nodes_lists.add_to(nl.name, name)
+
+def add_mega_net_to(selfie=Mega_Net(""), mn=Mega_Net("")):
+	selfie.all_nodes_lists(mn.name, mn)
+
+#def find_sub_net(list_of_links=[]):
+#def follow(list_of_links=[]):
 
 
 
