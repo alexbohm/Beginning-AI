@@ -43,14 +43,13 @@ def add_link(thing, things, thingie=1):
 	links.append(Link(thing, things, thingie))
 
 
-
-
 words = {"noun":{}, "adjective":{}, "verb":{}, "adverb":{}, "conjunction":{}, "preposition":{}, "interjection":{}}
 blue = sg.words
-for w_type in sg.words:
-	for ind in sg.words[w_type]:
-		for link in sg.words[w_type][ind].links:
-			add_link(sg.words[w_type][ind], sg.words[w_type][link], sg.words[w_type][ind].links[link])
+with open("%s/links_save.py" % (getcwd()), "r") as f: # save read in
+	bob = f.read().splitlines()
+for line in bob:
+	eval("add_link(%s)" % (line))
+
 
 class Word(object):
 	def __init__(self, word, w_type, forms={}):
@@ -84,13 +83,26 @@ class Mega_Net(object):
 		if nodes2:
 			self.all_nodes_lists.add_to(nodes2.name, nodes2)
 	def add_nodes_list(self, nl=Sub_Net("")):
-		self.all_nodes_lists.add_to(nl.name, name)
+		self.all_nodes_lists.add_to(nl.name, nl)
 
 def add_mega_net_to(selfie=Mega_Net(""), mn=Mega_Net("")):
 	selfie.all_nodes_lists(mn.name, mn)
 
-#def find_sub_net(list_of_links=[]):
-#def follow(list_of_links=[]):
+def single_follow(startword=Word("","")):
+	out = startword.word_out
+	full_list={}
+	for e in out:
+		full_list[e.word]=e.word_out
+	return full_list
+
+def full_follow(startword=Word("",""), limit=3):
+	sf = single_follow(startword)
+	new = {}
+	for e, k in sf.iteritems():
+		for i in k:
+			new[i.word] = single_follow(i)
+	return new
+
 
 
 
@@ -103,9 +115,18 @@ food = Word("food", "noun")
 bread = Word("bread", "noun")
 cake = Word("bread", "noun")
 t_eat = Word("to eat", "verb")
-foods = Sub_Net("foods", "misc", [bread, cake, eat])
+foods = Sub_Net("foods", "misc", [bread, cake, t_eat])
 animal_foods = Mega_Net("af", "misc", animals)
 animal_foods.add_nodes_list(foods)
+snake.add_word_ref(snail)
+snake.add_word_ref(animal)
+snake.add_word_ref(t_eat)
+cake.add_word_ref(bread)
+animal.add_word_ref(food)
+t_eat.add_word_ref(food)
+snail.add_word_ref(snake)
+food.add_word_ref(cake)
+print full_follow(snake)
 
 
 
