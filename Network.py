@@ -45,10 +45,11 @@ def add_link(thing, things, thingie=1):
 
 words = {"noun":{}, "adjective":{}, "verb":{}, "adverb":{}, "conjunction":{}, "preposition":{}, "interjection":{}}
 blue = sg.words
-with open("%s/links_save.py" % (getcwd()), "r") as f: # save read in
-	bob = f.read().splitlines()
-for line in bob:
-	eval("add_link(%s)" % (line))
+#Link read in
+for w_type in sg.words:
+	for ind in sg.words[w_type]:
+		for link in sg.words[w_type][ind].links:
+			add_link(sg.words[w_type][ind], sg.words[w_type][link], sg.words[w_type][ind].links[link])
 
 
 class Word(object):
