@@ -26,10 +26,10 @@ def Save():
 	type2 = ty[2].get()
 	if word1 != "" and word2 != "" and type1 != "" and type2 != "":
 		chv = ch.get()
-		if chv == "":
-			charge = 1
+		if chv == "": charge = 1.0
 		else:
-			charge = float(ch.get())
+			try: charge = float(ch.get())
+			except ValueError: print "Charge must be a number"; return
 		sg.words[type1][word1].links[word2] = charge
 		sg.save()
 		print "linked '%s' with '%s' with a charge of %d" % (word1, word2, charge)
@@ -38,8 +38,7 @@ def Save():
 			ent[num].configure(bg="grey")
 			ty[num].configure(bg="grey")
 			ent[num].delete(0, END)
-	else:
-		print "Empty Text"
+	else: print "Empty Text"
 def check(num):
 	word = ent[num].get()
 	w_type = ty[num].get()
