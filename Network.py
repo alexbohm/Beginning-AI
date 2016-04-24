@@ -96,9 +96,17 @@ def add_mega_net_to(selfie=Mega_Net(""), mn=Mega_Net("")):
 
 
 
-charlie = Word("snake", "noun")
-bob = Word("snail", "noun")
-bob.add_word_ref(charlie)
+snake = Word("snake", "noun")
+snail = Word("snail", "noun")
+animal = Word("animal", "noun")
+animals = Sub_Net("animals", "noun", [snake, snail])
+food = Word("food", "noun")
+bread = Word("bread", "noun")
+cake = Word("bread", "noun")
+t_eat = Word("to eat", "verb")
+foods = Sub_Net("foods", "misc", [bread, cake, eat])
+animal_foods = Mega_Net("af", "misc", animals)
+animal_foods.add_nodes_list(foods)
 
 
 
