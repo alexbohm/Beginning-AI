@@ -30,7 +30,7 @@ def Save():
 		else:
 			try: charge = float(ch.get())
 			except ValueError: print "Charge must be a number"; return
-		sg.words[type1][word1].links[word2] = charge
+		sg.words[type1][word1].links[word2] = [type2, charge]
 		sg.save()
 		print "linked '%s' with '%s' with a charge of %d" % (word1, word2, charge)
 		ent[1].focus_set()

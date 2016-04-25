@@ -49,8 +49,8 @@ blue = sg.words
 for w_type in sg.words:
 	for ind in sg.words[w_type]:
 		for link in sg.words[w_type][ind].links:
-			add_link(sg.words[w_type][ind], sg.words[w_type][link], sg.words[w_type][ind].links[link])
-
+			add_link(sg.words[w_type][ind], sg.words[sg.words[w_type][ind].links[link][0]][link], sg.words[w_type][ind].links[link][1])
+			#print link, sg.words[w_type][ind].links[link][0]
 
 class Word(object):
 	def __init__(self, word, w_type, forms={}):
