@@ -104,6 +104,14 @@ def full_follow(startword=Word("",""), limit=3):
 			new[i.word] = single_follow(i)
 	return new
 
+def readable_follow(new={}):
+	path = []
+	for e, k in new.iteritems():
+		print "Members at %s:" %(e)
+		for i, c in k.iteritems():
+			print "	" + i
+			for y in c:
+				print "     " + y.word
 
 
 
@@ -127,7 +135,9 @@ animal.add_word_ref(food)
 t_eat.add_word_ref(food)
 snail.add_word_ref(snake)
 food.add_word_ref(cake)
-print full_follow(snake)
+b = full_follow(snake)
+print b
+readable_follow(b)
 
 
 
