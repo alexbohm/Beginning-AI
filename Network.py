@@ -98,11 +98,6 @@ def choose(b=[Word("","")], lean=0):
 		return b[-1]
 	return b[int(randome)]
 
-def check(a, path): #returns true if a is in path
-	if a in path:
-		return True
-	return False
-
 def full_follow(sw=Word("",""), limit=4):
 	out = sw.word_out
 	word = choose(out)
@@ -146,7 +141,7 @@ snail.add_word_ref(animal)
 for e in bread.word_out:
 	print e.word
 b = full_follow(snake)
-print "____"
+print "----"
 for e in b:
 	print e.word
 
