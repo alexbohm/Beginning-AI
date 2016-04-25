@@ -16,7 +16,7 @@ bait|noun|{}
 chair|noun|{}
 adjustment|noun|{}
 hate|noun|{}
-milk|noun|{'water': 1}
+milk|noun|{}
 kite|noun|{}
 grape|noun|{}
 father|noun|{}
@@ -30,7 +30,7 @@ hill|noun|{}
 division|noun|{}
 woman|noun|{}
 string|noun|{}
-song|noun|{'sound': 1}
+song|noun|{}
 kitty|noun|{}
 tent|noun|{}
 vase|noun|{}
@@ -72,7 +72,6 @@ design|noun|{}
 governor|noun|{}
 lawyer|noun|{}
 cactus|noun|{}
-news|noun|{}
 chicken|noun|{}
 quill|noun|{}
 belief|noun|{}
@@ -94,7 +93,7 @@ toes|noun|{}
 degree|noun|{}
 exchange|noun|{}
 men|noun|{}
-water|noun|{'bread': 1}
+water|noun|{}
 baseball|noun|{}
 sink|noun|{}
 pancake|noun|{}
@@ -117,7 +116,7 @@ popcorn|noun|{}
 opinion|noun|{}
 punishment|noun|{}
 love|noun|{}
-apple|noun|{'juice': 1, 'horse': ' 1.25', 'banana': 1}
+apple|noun|{}
 family|noun|{}
 heart|noun|{}
 straw|noun|{}
@@ -149,7 +148,7 @@ downtown|noun|{}
 trail|noun|{}
 flag|noun|{}
 train|noun|{}
-stick|noun|{'wood': 1}
+stick|noun|{}
 rabbit|noun|{}
 teaching|noun|{}
 baby|noun|{}
@@ -186,7 +185,7 @@ lock|noun|{}
 tax|noun|{}
 honey|noun|{}
 drawer|noun|{}
-rainstorm|noun|{'water': ' 1.5'}
+rainstorm|noun|{}
 slip|noun|{}
 sense|noun|{}
 cows|noun|{}
@@ -253,7 +252,7 @@ paper|noun|{}
 committee|noun|{}
 shake|noun|{}
 existence|noun|{}
-owl|noun|{'robin': ' 2'}
+owl|noun|{}
 birds|noun|{}
 tendency|noun|{}
 group|noun|{}
@@ -269,7 +268,7 @@ orange|noun|{}
 holiday|noun|{}
 dolls|noun|{}
 dad|noun|{}
-food|noun|{'cake': 1, 'melon': ' 1', 'grape': ' 3', 'pie': 1, 'pizza': ' 1'}
+food|noun|{'cake': ['noun', 1.0], 'grape': ['noun', 1.0]}
 rake|noun|{}
 oranges|noun|{}
 number|noun|{}
@@ -282,7 +281,7 @@ foot|noun|{}
 clouds|noun|{}
 bath|noun|{}
 day|noun|{}
-bread|noun|{'cake': ' 1.5', 'loaf': 1}
+bread|noun|{}
 name|noun|{}
 lettuce|noun|{}
 servant|noun|{}
@@ -331,7 +330,7 @@ umbrella|noun|{}
 theory|noun|{}
 dirt|noun|{}
 cars|noun|{}
-horse|noun|{'rainstorm': 1}
+horse|noun|{}
 cart|noun|{}
 houses|noun|{}
 reason|noun|{}
@@ -392,19 +391,17 @@ toe|noun|{}
 eyes|noun|{}
 stomach|noun|{}
 shelf|noun|{}
-addition|noun|{}
 needle|noun|{}
 park|noun|{}
 plane|noun|{}
 part|noun|{}
 rifle|noun|{}
 geese|noun|{}
-flowers|noun|{}
+copy|noun|{}
 stocking|noun|{}
 steel|noun|{}
 distance|noun|{}
 legs|noun|{}
-minister|noun|{}
 icicle|noun|{}
 tree|noun|{}
 bed|noun|{}
@@ -415,6 +412,7 @@ friend|noun|{}
 iron|noun|{}
 coat|noun|{}
 sister|noun|{}
+amount|noun|{}
 feeling|noun|{}
 transport|noun|{}
 bridge|noun|{}
@@ -423,12 +421,11 @@ beggar|noun|{}
 fowl|noun|{}
 mind|noun|{}
 argument|noun|{}
-pigs|noun|{}
+alley|noun|{}
 ant|noun|{}
-juice|noun|{'milk': ' 3'}
+juice|noun|{}
 rat|noun|{}
 seed|noun|{}
-stretch|noun|{}
 anger|noun|{}
 north|noun|{}
 breakfast|noun|{}
@@ -448,6 +445,7 @@ zoo|noun|{}
 note|noun|{}
 lip|noun|{}
 chess|noun|{}
+meeting|noun|{}
 truck|noun|{}
 soap|noun|{}
 channel|noun|{}
@@ -462,12 +460,13 @@ organization|noun|{}
 coil|noun|{}
 class|noun|{}
 apples|noun|{}
+representative|noun|{}
 reward|noun|{}
 fang|noun|{}
 cloth|noun|{}
 alarm|noun|{}
 camp|noun|{}
-cover|noun|{}
+request|noun|{}
 disease|noun|{}
 tooth|noun|{}
 pipe|noun|{}
@@ -498,7 +497,7 @@ mice|noun|{}
 fifth|noun|{}
 ground|noun|{}
 current|noun|{}
-copy|noun|{}
+flowers|noun|{}
 knowledge|noun|{}
 title|noun|{}
 writer|noun|{}
@@ -506,7 +505,7 @@ jar|noun|{}
 texture|noun|{}
 crime|noun|{}
 celery|noun|{}
-wood|noun|{'water': ' 2'}
+wood|noun|{}
 disgust|noun|{}
 fuel|noun|{}
 circle|noun|{}
@@ -516,7 +515,6 @@ giants|noun|{}
 plate|noun|{}
 haircut|noun|{}
 dust|noun|{}
-pull|noun|{}
 cannon|noun|{}
 watch|noun|{}
 bear|noun|{}
@@ -544,6 +542,7 @@ oven|noun|{}
 burst|noun|{}
 bucket|noun|{}
 frame|noun|{}
+toys|noun|{}
 plough|noun|{}
 achiever|noun|{}
 powder|noun|{}
@@ -598,7 +597,7 @@ rose|noun|{}
 railway|noun|{}
 camera|noun|{}
 riddle|noun|{}
-loaf|noun|{'corn': ' 3', 'bread': 1}
+loaf|noun|{}
 bell|noun|{}
 color|noun|{}
 cemetery|noun|{}
@@ -607,7 +606,7 @@ jeans|noun|{}
 ants|noun|{}
 walk|noun|{}
 laugh|noun|{}
-church|noun|{}
+news|noun|{}
 vessel|noun|{}
 table|noun|{}
 twig|noun|{}
@@ -617,7 +616,7 @@ turkey|noun|{}
 debt|noun|{}
 beef|noun|{}
 tramp|noun|{}
-lizards|noun|{}
+stamp|noun|{}
 toothpaste|noun|{}
 vacation|noun|{}
 cent|noun|{}
@@ -633,7 +632,6 @@ leg|noun|{}
 treatment|noun|{}
 engine|noun|{}
 direction|noun|{}
-wish|noun|{}
 flight|noun|{}
 squirrel|noun|{}
 reaction|noun|{}
@@ -642,9 +640,9 @@ crack|noun|{}
 mine|noun|{}
 tiger|noun|{}
 lift|noun|{}
-alley|noun|{}
+minister|noun|{}
 bulb|noun|{}
-sound|noun|{'rainstorm': 1}
+sound|noun|{}
 tank|noun|{}
 look|noun|{}
 need|noun|{}
@@ -666,8 +664,9 @@ ducks|noun|{}
 middle|noun|{}
 brake|noun|{}
 prose|noun|{}
-robin|noun|{'stick': ' 2', 'song': ' 1.5'}
+robin|noun|{}
 property|noun|{}
+sponge|noun|{}
 education|noun|{}
 shirt|noun|{}
 doctor|noun|{}
@@ -675,7 +674,7 @@ things|noun|{}
 balloon|noun|{}
 nail|noun|{}
 wound|noun|{}
-amount|noun|{}
+pigs|noun|{}
 harmony|noun|{}
 babies|noun|{}
 vegetable|noun|{}
@@ -785,7 +784,7 @@ learning|noun|{}
 crowd|noun|{}
 doll|noun|{}
 spring|noun|{}
-toys|noun|{}
+church|noun|{}
 crown|noun|{}
 back|noun|{}
 library|noun|{}
@@ -836,11 +835,12 @@ shoes|noun|{}
 chance|noun|{}
 oatmeal|noun|{}
 side|noun|{}
-stamp|noun|{}
+addition|noun|{}
 range|noun|{}
 afternoon|noun|{}
 act|noun|{}
 tongue|noun|{}
+observation|noun|{}
 hospital|noun|{}
 road|noun|{}
 pollution|noun|{}
@@ -856,7 +856,7 @@ weather|noun|{}
 brush|noun|{}
 knee|noun|{}
 quiet|noun|{}
-representative|noun|{}
+stretch|noun|{}
 yam|noun|{}
 market|noun|{}
 van|noun|{}
@@ -892,10 +892,10 @@ good-bye|noun|{}
 line|noun|{}
 ear|noun|{}
 basin|noun|{}
-observation|noun|{}
-sponge|noun|{}
+lizards|noun|{}
+pull|noun|{}
 waste|noun|{}
-meeting|noun|{}
+wish|noun|{}
 appliance|noun|{}
 fight|noun|{}
 work|noun|{}
@@ -915,10 +915,10 @@ sticks|noun|{}
 pin|noun|{}
 ladybug|noun|{}
 taste|noun|{}
-request|noun|{}
+cover|noun|{}
 measure|noun|{}
 deer|noun|{}
-pie|noun|{'to like': 1.0}
+pie|noun|{}
 pig|noun|{}
 twist|noun|{}
 fly|noun|{}
@@ -953,7 +953,7 @@ brothers|noun|{}
 toad|noun|{}
 surprise|noun|{}
 teeth|noun|{}
-pear|noun|{'juice': ' 2'}
+pear|noun|{}
 carpenter|noun|{}
 apparel|noun|{}
 insect|noun|{}
@@ -980,13 +980,11 @@ push|noun|{}
 songs|noun|{}
 hope|noun|{}
 quizzical|adjective|{}
-highfalutin|adjective|{}
-pointless|adjective|{}
 dynamic|adjective|{}
 wakeful|adjective|{}
 cheerful|adjective|{}
 thoughtful|adjective|{}
-goofy|adjective|{}
+efficient|adjective|{}
 cooperative|adjective|{}
 questionable|adjective|{}
 abundant|adjective|{}
@@ -997,6 +995,7 @@ vacuous|adjective|{}
 concerned|adjective|{}
 young|adjective|{}
 sparkling|adjective|{}
+elite|adjective|{}
 abhorrent|adjective|{}
 sweltering|adjective|{}
 macho|adjective|{}
@@ -1019,7 +1018,6 @@ courageous|adjective|{}
 vast|adjective|{}
 cool|adjective|{}
 elated|adjective|{}
-wary|adjective|{}
 bewildered|adjective|{}
 level|adjective|{}
 wooden|adjective|{}
@@ -1067,7 +1065,6 @@ efficacious|adjective|{}
 festive|adjective|{}
 loose|adjective|{}
 torpid|adjective|{}
-condemned|adjective|{}
 holistic|adjective|{}
 strong|adjective|{}
 momentous|adjective|{}
@@ -1076,7 +1073,7 @@ dry|adjective|{}
 great|adjective|{}
 ultra|adjective|{}
 ahead|adjective|{}
-broken|adjective|{}
+jazzy|adjective|{}
 dusty|adjective|{}
 piquant|adjective|{}
 creepy|adjective|{}
@@ -1089,6 +1086,7 @@ whimsical|adjective|{}
 fantastic|adjective|{}
 kindhearted|adjective|{}
 miscreant|adjective|{}
+barbarous|adjective|{}
 cowardly|adjective|{}
 cloistered|adjective|{}
 marked|adjective|{}
@@ -1099,6 +1097,7 @@ nauseating|adjective|{}
 aberrant|adjective|{}
 stingy|adjective|{}
 standing|adjective|{}
+endurable|adjective|{}
 distinct|adjective|{}
 illegal|adjective|{}
 angry|adjective|{}
@@ -1115,14 +1114,14 @@ loving|adjective|{}
 flat|adjective|{}
 wretched|adjective|{}
 clever|adjective|{}
-barbarous|adjective|{}
+highfalutin|adjective|{}
 pretty|adjective|{}
-endurable|adjective|{}
+wary|adjective|{}
 handsomely|adjective|{}
 unequaled|adjective|{}
 acceptable|adjective|{}
 symptomatic|adjective|{}
-charming|adjective|{}
+aware|adjective|{}
 tested|adjective|{}
 long|adjective|{}
 warm|adjective|{}
@@ -1135,7 +1134,6 @@ eatable|adjective|{}
 verdant|adjective|{}
 meek|adjective|{}
 unbiased|adjective|{}
-rampant|adjective|{}
 somber|adjective|{}
 cuddly|adjective|{}
 harmonious|adjective|{}
@@ -1158,7 +1156,7 @@ huge|adjective|{}
 productive|adjective|{}
 defective|adjective|{}
 flawless|adjective|{}
-nonchalant|adjective|{}
+needy|adjective|{}
 imminent|adjective|{}
 flaky|adjective|{}
 fortunate|adjective|{}
@@ -1190,12 +1188,13 @@ ambiguous|adjective|{}
 short|adjective|{}
 splendid|adjective|{}
 crowded|adjective|{}
+ablaze|adjective|{}
 light|adjective|{}
 yielding|adjective|{}
 hypnotic|adjective|{}
 dispensable|adjective|{}
 deserted|adjective|{}
-needy|adjective|{}
+nonchalant|adjective|{}
 green|adjective|{}
 puny|adjective|{}
 deafening|adjective|{}
@@ -1210,7 +1209,6 @@ inconclusive|adjective|{}
 rebellious|adjective|{}
 doubtful|adjective|{}
 telling|adjective|{}
-unsuitable|adjective|{}
 cold|adjective|{}
 sassy|adjective|{}
 arrogant|adjective|{}
@@ -1226,7 +1224,6 @@ willing|adjective|{}
 nifty|adjective|{}
 orange|adjective|{}
 victorious|adjective|{}
-jazzy|adjective|{}
 ritzy|adjective|{}
 wry|adjective|{}
 good|adjective|{}
@@ -1300,6 +1297,7 @@ chilly|adjective|{}
 labored|adjective|{}
 disturbed|adjective|{}
 aboard|adjective|{}
+broken|adjective|{}
 gusty|adjective|{}
 loud|adjective|{}
 jumbled|adjective|{}
@@ -1350,7 +1348,7 @@ foamy|adjective|{}
 hurt|adjective|{}
 parsimonious|adjective|{}
 gruesome|adjective|{}
-elite|adjective|{}
+rampant|adjective|{}
 wide|adjective|{}
 kind|adjective|{}
 bored|adjective|{}
@@ -1364,13 +1362,13 @@ silly|adjective|{}
 glossy|adjective|{}
 historical|adjective|{}
 staking|adjective|{}
-curious|adjective|{}
 gigantic|adjective|{}
 wandering|adjective|{}
 profuse|adjective|{}
 vengeful|adjective|{}
 melodic|adjective|{}
 unaccountable|adjective|{}
+frightened|adjective|{}
 outstanding|adjective|{}
 woebegone|adjective|{}
 modern|adjective|{}
@@ -1381,11 +1379,12 @@ substantial|adjective|{}
 brawny|adjective|{}
 imperfect|adjective|{}
 null|adjective|{}
+goofy|adjective|{}
 boorish|adjective|{}
 afraid|adjective|{}
 fierce|adjective|{}
 drunk|adjective|{}
-efficient|adjective|{}
+unsuitable|adjective|{}
 lackadaisical|adjective|{}
 recondite|adjective|{}
 internal|adjective|{}
@@ -1397,7 +1396,6 @@ cooing|adjective|{}
 axiomatic|adjective|{}
 debonair|adjective|{}
 boiling|adjective|{}
-illustrious|adjective|{}
 tired|adjective|{}
 fair|adjective|{}
 numberless|adjective|{}
@@ -1478,7 +1476,7 @@ wholesale|adjective|{}
 thoughtless|adjective|{}
 futuristic|adjective|{}
 glib|adjective|{}
-nutritious|adjective|{}
+available|adjective|{}
 slimy|adjective|{}
 cynical|adjective|{}
 fluffy|adjective|{}
@@ -1486,8 +1484,10 @@ plausible|adjective|{}
 nasty |adjective|{}
 tender|adjective|{}
 changeable|adjective|{}
+damp|adjective|{}
 smiling|adjective|{}
 oceanic|adjective|{}
+knowing|adjective|{}
 satisfying|adjective|{}
 steadfast|adjective|{}
 crooked|adjective|{}
@@ -1505,7 +1505,7 @@ ad hoc|adjective|{}
 numerous|adjective|{}
 berserk|adjective|{}
 wiry|adjective|{}
-available|adjective|{}
+nutritious|adjective|{}
 lazy|adjective|{}
 squealing|adjective|{}
 zippy|adjective|{}
@@ -1554,7 +1554,7 @@ better|adjective|{}
 unusual|adjective|{}
 jobless|adjective|{}
 capable|adjective|{}
-damp|adjective|{}
+condemned|adjective|{}
 political|adjective|{}
 dazzling|adjective|{}
 erect|adjective|{}
@@ -1701,7 +1701,7 @@ vague|adjective|{}
 helpful|adjective|{}
 nosy|adjective|{}
 perpetual|adjective|{}
-disillusioned|adjective|{}
+feigned|adjective|{}
 overrated|adjective|{}
 gleaming|adjective|{}
 foolish|adjective|{}
@@ -1715,11 +1715,11 @@ old|adjective|{}
 humorous|adjective|{}
 flagrant|adjective|{}
 magnificent|adjective|{}
-alive|adjective|{}
+elderly|adjective|{}
 whispering|adjective|{}
 ragged|adjective|{}
 mighty|adjective|{}
-ablaze|adjective|{}
+curious|adjective|{}
 racial|adjective|{}
 amused|adjective|{}
 direful|adjective|{}
@@ -1730,7 +1730,7 @@ legal|adjective|{}
 witty|adjective|{}
 nutty|adjective|{}
 icy|adjective|{}
-feigned|adjective|{}
+disillusioned|adjective|{}
 expensive|adjective|{}
 redundant|adjective|{}
 adorable|adjective|{}
@@ -1776,14 +1776,14 @@ lively|adjective|{}
 homeless|adjective|{}
 secretive|adjective|{}
 easy|adjective|{}
-frightened|adjective|{}
+pointless|adjective|{}
 mere|adjective|{}
 agonizing|adjective|{}
 sad|adjective|{}
 innate|adjective|{}
 sneaky|adjective|{}
 noxious|adjective|{}
-knowing|adjective|{}
+illustrious|adjective|{}
 alleged|adjective|{}
 fast|adjective|{}
 tame|adjective|{}
@@ -1806,7 +1806,7 @@ overjoyed|adjective|{}
 taboo|adjective|{}
 peaceful|adjective|{}
 forgetful|adjective|{}
-elderly|adjective|{}
+alive|adjective|{}
 reflective|adjective|{}
 squalid|adjective|{}
 warlike|adjective|{}
@@ -1874,7 +1874,7 @@ silky|adjective|{}
 guiltless|adjective|{}
 important|adjective|{}
 drab|adjective|{}
-aware|adjective|{}
+charming|adjective|{}
 skinny|adjective|{}
 careful|adjective|{}
 rightful|adjective|{}
@@ -1934,6 +1934,7 @@ to exercise|verb|{}|{'past': 'exercised', 'infinitive': 'to exercise', 'future':
 to part|verb|{}|{'past': 'parted', 'infinitive': 'to part', 'future': 'will part', 'present': 'parts'}
 to flash|verb|{}|{'past': 'flashed', 'infinitive': 'to flash', 'future': 'will flash', 'present': 'flashs'}
 to shop|verb|{}|{'past': 'shopped', 'infinitive': 'to shop', 'future': 'will shop', 'present': 'shops'}
+to strengthen|verb|{}|{'past': 'strengthened', 'infinitive': 'to strengthen', 'future': 'will strengthen', 'present': 'strengthens'}
 to show|verb|{}|{'past': 'showed', 'infinitive': 'to show', 'future': 'will show', 'present': 'shows'}
 to divide|verb|{}|{'past': 'divided', 'infinitive': 'to divide', 'future': 'will divide', 'present': 'divides'}
 to overhear|verb|{}|{'past': 'overheared', 'infinitive': 'to overhear', 'future': 'will overhear', 'present': 'overhears'}
@@ -1999,10 +2000,9 @@ to burn|verb|{}|{'past': 'burned', 'infinitive': 'to burn', 'future': 'will burn
 to install|verb|{}|{'past': 'installed', 'infinitive': 'to install', 'future': 'will install', 'present': 'installs'}
 to whine|verb|{}|{'past': 'whined', 'infinitive': 'to whine', 'future': 'will whine', 'present': 'whines'}
 to move|verb|{}|{'past': 'moved', 'infinitive': 'to move', 'future': 'will move', 'present': 'moves'}
-to head|verb|{}|{'past': 'headed', 'infinitive': 'to head', 'future': 'will head', 'present': 'heads'}
+to add|verb|{}|{'past': 'added', 'infinitive': 'to add', 'future': 'will add', 'present': 'adds'}
 to thaw|verb|{}|{'past': 'thawed', 'infinitive': 'to thaw', 'future': 'will thaw', 'present': 'thaws'}
 to skip|verb|{}|{'past': 'skipped', 'infinitive': 'to skip', 'future': 'will skip', 'present': 'skips'}
-to squash|verb|{}|{'past': 'squashed', 'infinitive': 'to squash', 'future': 'will squash', 'present': 'squashs'}
 to matter|verb|{}|{'past': 'mattered', 'infinitive': 'to matter', 'future': 'will matter', 'present': 'matters'}
 to harass|verb|{}|{'past': 'harassed', 'infinitive': 'to harass', 'future': 'will harass', 'present': 'harasss'}
 to drive|verb|{}|{'past': 'drived', 'infinitive': 'to drive', 'future': 'will drive', 'present': 'drives'}
@@ -2027,6 +2027,7 @@ to ban|verb|{}|{'past': 'baned', 'infinitive': 'to ban', 'future': 'will ban', '
 to carve|verb|{}|{'past': 'carved', 'infinitive': 'to carve', 'future': 'will carve', 'present': 'carves'}
 to match|verb|{}|{'past': 'matched', 'infinitive': 'to match', 'future': 'will match', 'present': 'matchs'}
 to doubt|verb|{}|{'past': 'doubted', 'infinitive': 'to doubt', 'future': 'will doubt', 'present': 'doubts'}
+to save|verb|{}|{'past': 'saved', 'infinitive': 'to save', 'future': 'will save', 'present': 'saves'}
 to hypothesize|verb|{}|{'past': 'hypothesized', 'infinitive': 'to hypothesize', 'future': 'will hypothesize', 'present': 'hypothesizes'}
 to thrust|verb|{}|{'past': 'thrusted', 'infinitive': 'to thrust', 'future': 'will thrust', 'present': 'thrusts'}
 to risk|verb|{}|{'past': 'risked', 'infinitive': 'to risk', 'future': 'will risk', 'present': 'risks'}
@@ -2059,7 +2060,6 @@ to reach|verb|{}|{'past': 'reached', 'infinitive': 'to reach', 'future': 'will r
 to search|verb|{}|{'past': 'searched', 'infinitive': 'to search', 'future': 'will search', 'present': 'searchs'}
 to grate|verb|{}|{'past': 'grated', 'infinitive': 'to grate', 'future': 'will grate', 'present': 'grates'}
 to prescribe|verb|{}|{'past': 'prescribed', 'infinitive': 'to prescribe', 'future': 'will prescribe', 'present': 'prescribes'}
-to creep|verb|{}|{'past': 'creepped', 'infinitive': 'to creep', 'future': 'will creep', 'present': 'creeps'}
 to connect|verb|{}|{'past': 'connected', 'infinitive': 'to connect', 'future': 'will connect', 'present': 'connects'}
 to soak|verb|{}|{'past': 'soaked', 'infinitive': 'to soak', 'future': 'will soak', 'present': 'soaks'}
 to withstand|verb|{}|{'past': 'withstanded', 'infinitive': 'to withstand', 'future': 'will withstand', 'present': 'withstands'}
@@ -2079,11 +2079,11 @@ to interfere|verb|{}|{'past': 'interfered', 'infinitive': 'to interfere', 'futur
 to walk|verb|{}|{'past': 'walked', 'infinitive': 'to walk', 'future': 'will walk', 'present': 'walks'}
 to nominate|verb|{}|{'past': 'nominated', 'infinitive': 'to nominate', 'future': 'will nominate', 'present': 'nominates'}
 to correlate|verb|{}|{'past': 'correlated', 'infinitive': 'to correlate', 'future': 'will correlate', 'present': 'correlates'}
+to slip|verb|{}|{'past': 'slipped', 'infinitive': 'to slip', 'future': 'will slip', 'present': 'slips'}
 to subtract|verb|{}|{'past': 'subtracted', 'infinitive': 'to subtract', 'future': 'will subtract', 'present': 'subtracts'}
 to stitch|verb|{}|{'past': 'stitched', 'infinitive': 'to stitch', 'future': 'will stitch', 'present': 'stitchs'}
 to stay|verb|{}|{'past': 'staied', 'infinitive': 'to stay', 'future': 'will stay', 'present': 'stays'}
 to bite|verb|{}|{'past': 'bited', 'infinitive': 'to bite', 'future': 'will bite', 'present': 'bites'}
-to object|verb|{}|{'past': 'objected', 'infinitive': 'to object', 'future': 'will object', 'present': 'objects'}
 to enhance|verb|{}|{'past': 'enhanced', 'infinitive': 'to enhance', 'future': 'will enhance', 'present': 'enhances'}
 to stare|verb|{}|{'past': 'stared', 'infinitive': 'to stare', 'future': 'will stare', 'present': 'stares'}
 to destroy|verb|{}|{'past': 'destroied', 'infinitive': 'to destroy', 'future': 'will destroy', 'present': 'destroys'}
@@ -2110,6 +2110,7 @@ to soothe|verb|{}|{'past': 'soothed', 'infinitive': 'to soothe', 'future': 'will
 to pedal|verb|{}|{'past': 'pedaled', 'infinitive': 'to pedal', 'future': 'will pedal', 'present': 'pedals'}
 to tap|verb|{}|{'past': 'tapped', 'infinitive': 'to tap', 'future': 'will tap', 'present': 'taps'}
 to forsake|verb|{}|{'past': 'forsaked', 'infinitive': 'to forsake', 'future': 'will forsake', 'present': 'forsakes'}
+to assist|verb|{}|{'past': 'assisted', 'infinitive': 'to assist', 'future': 'will assist', 'present': 'assists'}
 to jail|verb|{}|{'past': 'jailed', 'infinitive': 'to jail', 'future': 'will jail', 'present': 'jails'}
 to explain|verb|{}|{'past': 'explained', 'infinitive': 'to explain', 'future': 'will explain', 'present': 'explains'}
 to treat|verb|{}|{'past': 'treated', 'infinitive': 'to treat', 'future': 'will treat', 'present': 'treats'}
@@ -2123,11 +2124,13 @@ to cause|verb|{}|{'past': 'caused', 'infinitive': 'to cause', 'future': 'will ca
 to conduct|verb|{}|{'past': 'conducted', 'infinitive': 'to conduct', 'future': 'will conduct', 'present': 'conducts'}
 to level|verb|{}|{'past': 'leveled', 'infinitive': 'to level', 'future': 'will level', 'present': 'levels'}
 to cycle|verb|{}|{'past': 'cycled', 'infinitive': 'to cycle', 'future': 'will cycle', 'present': 'cycles'}
+to leap|verb|{}|{'past': 'leapped', 'infinitive': 'to leap', 'future': 'will leap', 'present': 'leaps'}
 to exceed|verb|{}|{'past': 'exceeded', 'infinitive': 'to exceed', 'future': 'will exceed', 'present': 'exceeds'}
 to signal|verb|{}|{'past': 'signaled', 'infinitive': 'to signal', 'future': 'will signal', 'present': 'signals'}
 to melt|verb|{}|{'past': 'melted', 'infinitive': 'to melt', 'future': 'will melt', 'present': 'melts'}
 to deceive|verb|{}|{'past': 'deceived', 'infinitive': 'to deceive', 'future': 'will deceive', 'present': 'deceives'}
 to race|verb|{}|{'past': 'raced', 'infinitive': 'to race', 'future': 'will race', 'present': 'races'}
+to time|verb|{}|{'past': 'timed', 'infinitive': 'to time', 'future': 'will time', 'present': 'times'}
 to fold|verb|{}|{'past': 'folded', 'infinitive': 'to fold', 'future': 'will fold', 'present': 'folds'}
 to repeat|verb|{}|{'past': 'repeated', 'infinitive': 'to repeat', 'future': 'will repeat', 'present': 'repeats'}
 to evaluate|verb|{}|{'past': 'evaluated', 'infinitive': 'to evaluate', 'future': 'will evaluate', 'present': 'evaluates'}
@@ -2158,7 +2161,7 @@ to face|verb|{}|{'past': 'faced', 'infinitive': 'to face', 'future': 'will face'
 to pinch|verb|{}|{'past': 'pinched', 'infinitive': 'to pinch', 'future': 'will pinch', 'present': 'pinchs'}
 to boil|verb|{}|{'past': 'boiled', 'infinitive': 'to boil', 'future': 'will boil', 'present': 'boils'}
 to bare|verb|{}|{'past': 'bared', 'infinitive': 'to bare', 'future': 'will bare', 'present': 'bares'}
-to assist|verb|{}|{'past': 'assisted', 'infinitive': 'to assist', 'future': 'will assist', 'present': 'assists'}
+to object|verb|{}|{'past': 'objected', 'infinitive': 'to object', 'future': 'will object', 'present': 'objects'}
 to cure|verb|{}|{'past': 'cured', 'infinitive': 'to cure', 'future': 'will cure', 'present': 'cures'}
 to stick|verb|{}|{'past': 'sticked', 'infinitive': 'to stick', 'future': 'will stick', 'present': 'sticks'}
 to originate|verb|{}|{'past': 'originated', 'infinitive': 'to originate', 'future': 'will originate', 'present': 'originates'}
@@ -2176,7 +2179,6 @@ to inspire|verb|{}|{'past': 'inspired', 'infinitive': 'to inspire', 'future': 'w
 to admit|verb|{}|{'past': 'admited', 'infinitive': 'to admit', 'future': 'will admit', 'present': 'admits'}
 to inspect|verb|{}|{'past': 'inspected', 'infinitive': 'to inspect', 'future': 'will inspect', 'present': 'inspects'}
 to fly|verb|{}|{'past': 'flied', 'infinitive': 'to fly', 'future': 'will fly', 'present': 'flys'}
-to tick|verb|{}|{'past': 'ticked', 'infinitive': 'to tick', 'future': 'will tick', 'present': 'ticks'}
 to dwell|verb|{}|{'past': 'dwelled', 'infinitive': 'to dwell', 'future': 'will dwell', 'present': 'dwells'}
 to see|verb|{}|{'past': 'seed', 'infinitive': 'to see', 'future': 'will see', 'present': 'sees'}
 to speed|verb|{}|{'past': 'speeded', 'infinitive': 'to speed', 'future': 'will speed', 'present': 'speeds'}
@@ -2286,6 +2288,7 @@ to sink|verb|{}|{'past': 'sinked', 'infinitive': 'to sink', 'future': 'will sink
 to remove|verb|{}|{'past': 'removed', 'infinitive': 'to remove', 'future': 'will remove', 'present': 'removes'}
 to learn|verb|{}|{'past': 'learned', 'infinitive': 'to learn', 'future': 'will learn', 'present': 'learns'}
 to illustrate|verb|{}|{'past': 'illustrated', 'infinitive': 'to illustrate', 'future': 'will illustrate', 'present': 'illustrates'}
+to polish|verb|{}|{'past': 'polished', 'infinitive': 'to polish', 'future': 'will polish', 'present': 'polishs'}
 to pop|verb|{}|{'past': 'popped', 'infinitive': 'to pop', 'future': 'will pop', 'present': 'pops'}
 to enforce|verb|{}|{'past': 'enforced', 'infinitive': 'to enforce', 'future': 'will enforce', 'present': 'enforces'}
 to steer|verb|{}|{'past': 'steered', 'infinitive': 'to steer', 'future': 'will steer', 'present': 'steers'}
@@ -2378,7 +2381,7 @@ to warn|verb|{}|{'past': 'warned', 'infinitive': 'to warn', 'future': 'will warn
 to become|verb|{}|{'past': 'becomed', 'infinitive': 'to become', 'future': 'will become', 'present': 'becomes'}
 to branch|verb|{}|{'past': 'branched', 'infinitive': 'to branch', 'future': 'will branch', 'present': 'branchs'}
 to complete|verb|{}|{'past': 'completed', 'infinitive': 'to complete', 'future': 'will complete', 'present': 'completes'}
-to laugh|verb|{}|{'past': 'laughed', 'infinitive': 'to laugh', 'future': 'will laugh', 'present': 'laughs'}
+to make|verb|{}|{'past': 'maked', 'infinitive': 'to make', 'future': 'will make', 'present': 'makes'}
 to concern|verb|{}|{'past': 'concerned', 'infinitive': 'to concern', 'future': 'will concern', 'present': 'concerns'}
 to suppose|verb|{}|{'past': 'supposed', 'infinitive': 'to suppose', 'future': 'will suppose', 'present': 'supposes'}
 to wipe|verb|{}|{'past': 'wiped', 'infinitive': 'to wipe', 'future': 'will wipe', 'present': 'wipes'}
@@ -2441,7 +2444,7 @@ to stir|verb|{}|{'past': 'stired', 'infinitive': 'to stir', 'future': 'will stir
 to weigh|verb|{}|{'past': 'weighed', 'infinitive': 'to weigh', 'future': 'will weigh', 'present': 'weighs'}
 to integrate|verb|{}|{'past': 'integrated', 'infinitive': 'to integrate', 'future': 'will integrate', 'present': 'integrates'}
 to acted|verb|{}|{'past': 'acteded', 'infinitive': 'to acted', 'future': 'will acted', 'present': 'acteds'}
-to care|verb|{}|{'past': 'cared', 'infinitive': 'to care', 'future': 'will care', 'present': 'cares'}
+to lick|verb|{}|{'past': 'licked', 'infinitive': 'to lick', 'future': 'will lick', 'present': 'licks'}
 to tow|verb|{}|{'past': 'towed', 'infinitive': 'to tow', 'future': 'will tow', 'present': 'tows'}
 to rain|verb|{}|{'past': 'rained', 'infinitive': 'to rain', 'future': 'will rain', 'present': 'rains'}
 to joke|verb|{}|{'past': 'joked', 'infinitive': 'to joke', 'future': 'will joke', 'present': 'jokes'}
@@ -2513,7 +2516,7 @@ to lighten|verb|{}|{'past': 'lightened', 'infinitive': 'to lighten', 'future': '
 to suffer|verb|{}|{'past': 'suffered', 'infinitive': 'to suffer', 'future': 'will suffer', 'present': 'suffers'}
 to squeak|verb|{}|{'past': 'squeaked', 'infinitive': 'to squeak', 'future': 'will squeak', 'present': 'squeaks'}
 to eliminate|verb|{}|{'past': 'eliminated', 'infinitive': 'to eliminate', 'future': 'will eliminate', 'present': 'eliminates'}
-to slip|verb|{}|{'past': 'slipped', 'infinitive': 'to slip', 'future': 'will slip', 'present': 'slips'}
+to plant|verb|{}|{'past': 'planted', 'infinitive': 'to plant', 'future': 'will plant', 'present': 'plants'}
 to be|verb|{}|{'past': 'bed', 'infinitive': 'to be', 'future': 'will be', 'present': 'bes'}
 to fence|verb|{}|{'past': 'fenced', 'infinitive': 'to fence', 'future': 'will fence', 'present': 'fences'}
 to press|verb|{}|{'past': 'pressed', 'infinitive': 'to press', 'future': 'will press', 'present': 'presss'}
@@ -2526,7 +2529,6 @@ to establish|verb|{}|{'past': 'established', 'infinitive': 'to establish', 'futu
 to spread|verb|{}|{'past': 'spreaded', 'infinitive': 'to spread', 'future': 'will spread', 'present': 'spreads'}
 to fool|verb|{}|{'past': 'fooled', 'infinitive': 'to fool', 'future': 'will fool', 'present': 'fools'}
 to help|verb|{}|{'past': 'helpped', 'infinitive': 'to help', 'future': 'will help', 'present': 'helps'}
-to drown|verb|{}|{'past': 'drowned', 'infinitive': 'to drown', 'future': 'will drown', 'present': 'drowns'}
 to fight|verb|{}|{'past': 'fighted', 'infinitive': 'to fight', 'future': 'will fight', 'present': 'fights'}
 to respond|verb|{}|{'past': 'responded', 'infinitive': 'to respond', 'future': 'will respond', 'present': 'responds'}
 to guide|verb|{}|{'past': 'guided', 'infinitive': 'to guide', 'future': 'will guide', 'present': 'guides'}
@@ -2600,14 +2602,13 @@ to confuse|verb|{}|{'past': 'confused', 'infinitive': 'to confuse', 'future': 'w
 to scare|verb|{}|{'past': 'scared', 'infinitive': 'to scare', 'future': 'will scare', 'present': 'scares'}
 to enter|verb|{}|{'past': 'entered', 'infinitive': 'to enter', 'future': 'will enter', 'present': 'enters'}
 to decay|verb|{}|{'past': 'decaied', 'infinitive': 'to decay', 'future': 'will decay', 'present': 'decays'}
-to leap|verb|{}|{'past': 'leapped', 'infinitive': 'to leap', 'future': 'will leap', 'present': 'leaps'}
+to creep|verb|{}|{'past': 'creepped', 'infinitive': 'to creep', 'future': 'will creep', 'present': 'creeps'}
 to squeal|verb|{}|{'past': 'squealed', 'infinitive': 'to squeal', 'future': 'will squeal', 'present': 'squeals'}
 to marry|verb|{}|{'past': 'married', 'infinitive': 'to marry', 'future': 'will marry', 'present': 'marrys'}
 to tame|verb|{}|{'past': 'tamed', 'infinitive': 'to tame', 'future': 'will tame', 'present': 'tames'}
 to suggest|verb|{}|{'past': 'suggested', 'infinitive': 'to suggest', 'future': 'will suggest', 'present': 'suggests'}
 to normalize|verb|{}|{'past': 'normalized', 'infinitive': 'to normalize', 'future': 'will normalize', 'present': 'normalizes'}
 to lead|verb|{}|{'past': 'leaded', 'infinitive': 'to lead', 'future': 'will lead', 'present': 'leads'}
-to wed|verb|{}|{'past': 'weded', 'infinitive': 'to wed', 'future': 'will wed', 'present': 'weds'}
 to fancy|verb|{}|{'past': 'fancied', 'infinitive': 'to fancy', 'future': 'will fancy', 'present': 'fancys'}
 to administer|verb|{}|{'past': 'administered', 'infinitive': 'to administer', 'future': 'will administer', 'present': 'administers'}
 to forget|verb|{}|{'past': 'forgeted', 'infinitive': 'to forget', 'future': 'will forget', 'present': 'forgets'}
@@ -2622,7 +2623,7 @@ to swell|verb|{}|{'past': 'swelled', 'infinitive': 'to swell', 'future': 'will s
 to engineer|verb|{}|{'past': 'engineered', 'infinitive': 'to engineer', 'future': 'will engineer', 'present': 'engineers'}
 to reply|verb|{}|{'past': 'replied', 'infinitive': 'to reply', 'future': 'will reply', 'present': 'replys'}
 to shut|verb|{}|{'past': 'shuted', 'infinitive': 'to shut', 'future': 'will shut', 'present': 'shuts'}
-to plant|verb|{}|{'past': 'planted', 'infinitive': 'to plant', 'future': 'will plant', 'present': 'plants'}
+to tick|verb|{}|{'past': 'ticked', 'infinitive': 'to tick', 'future': 'will tick', 'present': 'ticks'}
 to run|verb|{}|{'past': 'runed', 'infinitive': 'to run', 'future': 'will run', 'present': 'runs'}
 to facilitate|verb|{}|{'past': 'facilitated', 'infinitive': 'to facilitate', 'future': 'will facilitate', 'present': 'facilitates'}
 to trouble|verb|{}|{'past': 'troubled', 'infinitive': 'to trouble', 'future': 'will trouble', 'present': 'troubles'}
@@ -2684,7 +2685,6 @@ to synthesize|verb|{}|{'past': 'synthesized', 'infinitive': 'to synthesize', 'fu
 to direct|verb|{}|{'past': 'directed', 'infinitive': 'to direct', 'future': 'will direct', 'present': 'directs'}
 to develop|verb|{}|{'past': 'developped', 'infinitive': 'to develop', 'future': 'will develop', 'present': 'develops'}
 to strip|verb|{}|{'past': 'stripped', 'infinitive': 'to strip', 'future': 'will strip', 'present': 'strips'}
-to assure|verb|{}|{'past': 'assured', 'infinitive': 'to assure', 'future': 'will assure', 'present': 'assures'}
 to divert|verb|{}|{'past': 'diverted', 'infinitive': 'to divert', 'future': 'will divert', 'present': 'diverts'}
 to chase|verb|{}|{'past': 'chased', 'infinitive': 'to chase', 'future': 'will chase', 'present': 'chases'}
 to retire|verb|{}|{'past': 'retired', 'infinitive': 'to retire', 'future': 'will retire', 'present': 'retires'}
@@ -2703,7 +2703,7 @@ to multiply|verb|{}|{'past': 'multiplied', 'infinitive': 'to multiply', 'future'
 to rinse|verb|{}|{'past': 'rinsed', 'infinitive': 'to rinse', 'future': 'will rinse', 'present': 'rinses'}
 to curl|verb|{}|{'past': 'curled', 'infinitive': 'to curl', 'future': 'will curl', 'present': 'curls'}
 to happen|verb|{}|{'past': 'happened', 'infinitive': 'to happen', 'future': 'will happen', 'present': 'happens'}
-to time|verb|{}|{'past': 'timed', 'infinitive': 'to time', 'future': 'will time', 'present': 'times'}
+to wed|verb|{}|{'past': 'weded', 'infinitive': 'to wed', 'future': 'will wed', 'present': 'weds'}
 to push|verb|{}|{'past': 'pushed', 'infinitive': 'to push', 'future': 'will push', 'present': 'pushs'}
 to untidy|verb|{}|{'past': 'untidied', 'infinitive': 'to untidy', 'future': 'will untidy', 'present': 'untidys'}
 to blush|verb|{}|{'past': 'blushed', 'infinitive': 'to blush', 'future': 'will blush', 'present': 'blushs'}
@@ -2712,11 +2712,11 @@ to examine|verb|{}|{'past': 'examined', 'infinitive': 'to examine', 'future': 'w
 to classify|verb|{}|{'past': 'classified', 'infinitive': 'to classify', 'future': 'will classify', 'present': 'classifys'}
 to detect|verb|{}|{'past': 'detected', 'infinitive': 'to detect', 'future': 'will detect', 'present': 'detects'}
 to decorate|verb|{}|{'past': 'decorated', 'infinitive': 'to decorate', 'future': 'will decorate', 'present': 'decorates'}
-to like|verb|{'to eat': 1.0}|{'past': 'liked', 'infinitive': 'to like', 'future': 'will like', 'present': 'likes'}
+to like|verb|{}|{'past': 'liked', 'infinitive': 'to like', 'future': 'will like', 'present': 'likes'}
 to create|verb|{}|{'past': 'created', 'infinitive': 'to create', 'future': 'will create', 'present': 'creates'}
 to ignore|verb|{}|{'past': 'ignored', 'infinitive': 'to ignore', 'future': 'will ignore', 'present': 'ignores'}
 to compare|verb|{}|{'past': 'compared', 'infinitive': 'to compare', 'future': 'will compare', 'present': 'compares'}
-to save|verb|{}|{'past': 'saved', 'infinitive': 'to save', 'future': 'will save', 'present': 'saves'}
+to drown|verb|{}|{'past': 'drowned', 'infinitive': 'to drown', 'future': 'will drown', 'present': 'drowns'}
 to supervise|verb|{}|{'past': 'supervised', 'infinitive': 'to supervise', 'future': 'will supervise', 'present': 'supervises'}
 to open|verb|{}|{'past': 'opened', 'infinitive': 'to open', 'future': 'will open', 'present': 'opens'}
 to sniff|verb|{}|{'past': 'sniffed', 'infinitive': 'to sniff', 'future': 'will sniff', 'present': 'sniffs'}
@@ -2734,7 +2734,7 @@ to unify|verb|{}|{'past': 'unified', 'infinitive': 'to unify', 'future': 'will u
 to sound|verb|{}|{'past': 'sounded', 'infinitive': 'to sound', 'future': 'will sound', 'present': 'sounds'}
 to devise|verb|{}|{'past': 'devised', 'infinitive': 'to devise', 'future': 'will devise', 'present': 'devises'}
 to handwrite|verb|{}|{'past': 'handwrited', 'infinitive': 'to handwrite', 'future': 'will handwrite', 'present': 'handwrites'}
-to strengthen|verb|{}|{'past': 'strengthened', 'infinitive': 'to strengthen', 'future': 'will strengthen', 'present': 'strengthens'}
+to squash|verb|{}|{'past': 'squashed', 'infinitive': 'to squash', 'future': 'will squash', 'present': 'squashs'}
 to review|verb|{}|{'past': 'reviewed', 'infinitive': 'to review', 'future': 'will review', 'present': 'reviews'}
 to spill|verb|{}|{'past': 'spilled', 'infinitive': 'to spill', 'future': 'will spill', 'present': 'spills'}
 to hover|verb|{}|{'past': 'hovered', 'infinitive': 'to hover', 'future': 'will hover', 'present': 'hovers'}
@@ -2758,7 +2758,7 @@ to heal|verb|{}|{'past': 'healed', 'infinitive': 'to heal', 'future': 'will heal
 to finalize|verb|{}|{'past': 'finalized', 'infinitive': 'to finalize', 'future': 'will finalize', 'present': 'finalizes'}
 to tie|verb|{}|{'past': 'tied', 'infinitive': 'to tie', 'future': 'will tie', 'present': 'ties'}
 to prick|verb|{}|{'past': 'pricked', 'infinitive': 'to prick', 'future': 'will prick', 'present': 'pricks'}
-to add|verb|{}|{'past': 'added', 'infinitive': 'to add', 'future': 'will add', 'present': 'adds'}
+to head|verb|{}|{'past': 'headed', 'infinitive': 'to head', 'future': 'will head', 'present': 'heads'}
 to damage|verb|{}|{'past': 'damaged', 'infinitive': 'to damage', 'future': 'will damage', 'present': 'damages'}
 to slap|verb|{}|{'past': 'slapped', 'infinitive': 'to slap', 'future': 'will slap', 'present': 'slaps'}
 to hurry|verb|{}|{'past': 'hurried', 'infinitive': 'to hurry', 'future': 'will hurry', 'present': 'hurrys'}
@@ -2803,7 +2803,7 @@ to awake|verb|{}|{'past': 'awaked', 'infinitive': 'to awake', 'future': 'will aw
 to excite|verb|{}|{'past': 'excited', 'infinitive': 'to excite', 'future': 'will excite', 'present': 'excites'}
 to snatch|verb|{}|{'past': 'snatched', 'infinitive': 'to snatch', 'future': 'will snatch', 'present': 'snatchs'}
 to breed|verb|{}|{'past': 'breeded', 'infinitive': 'to breed', 'future': 'will breed', 'present': 'breeds'}
-to eat|verb|{'food': 1, 'corn': ' 1.5', 'apple': 1}|{'past': 'eated', 'infinitive': 'to eat', 'future': 'will eat', 'present': 'eats'}
+to eat|verb|{}|{'past': 'eated', 'infinitive': 'to eat', 'future': 'will eat', 'present': 'eats'}
 to mean|verb|{}|{'past': 'meaned', 'infinitive': 'to mean', 'future': 'will mean', 'present': 'means'}
 to improve|verb|{}|{'past': 'improved', 'infinitive': 'to improve', 'future': 'will improve', 'present': 'improves'}
 to trace|verb|{}|{'past': 'traced', 'infinitive': 'to trace', 'future': 'will trace', 'present': 'traces'}
@@ -2822,7 +2822,7 @@ to injure|verb|{}|{'past': 'injured', 'infinitive': 'to injure', 'future': 'will
 to teach|verb|{}|{'past': 'teached', 'infinitive': 'to teach', 'future': 'will teach', 'present': 'teachs'}
 to harm|verb|{}|{'past': 'harmed', 'infinitive': 'to harm', 'future': 'will harm', 'present': 'harms'}
 to tremble|verb|{}|{'past': 'trembled', 'infinitive': 'to tremble', 'future': 'will tremble', 'present': 'trembles'}
-to polish|verb|{}|{'past': 'polished', 'infinitive': 'to polish', 'future': 'will polish', 'present': 'polishs'}
+to care|verb|{}|{'past': 'cared', 'infinitive': 'to care', 'future': 'will care', 'present': 'cares'}
 to hunt|verb|{}|{'past': 'hunted', 'infinitive': 'to hunt', 'future': 'will hunt', 'present': 'hunts'}
 to swear|verb|{}|{'past': 'sweared', 'infinitive': 'to swear', 'future': 'will swear', 'present': 'swears'}
 to revise|verb|{}|{'past': 'revised', 'infinitive': 'to revise', 'future': 'will revise', 'present': 'revises'}
@@ -2888,8 +2888,8 @@ to dig|verb|{}|{'past': 'diged', 'infinitive': 'to dig', 'future': 'will dig', '
 to flee|verb|{}|{'past': 'fleed', 'infinitive': 'to flee', 'future': 'will flee', 'present': 'flees'}
 to cost|verb|{}|{'past': 'costed', 'infinitive': 'to cost', 'future': 'will cost', 'present': 'costs'}
 to dramatize|verb|{}|{'past': 'dramatized', 'infinitive': 'to dramatize', 'future': 'will dramatize', 'present': 'dramatizes'}
-to lick|verb|{}|{'past': 'licked', 'infinitive': 'to lick', 'future': 'will lick', 'present': 'licks'}
-to make|verb|{}|{'past': 'maked', 'infinitive': 'to make', 'future': 'will make', 'present': 'makes'}
+to assure|verb|{}|{'past': 'assured', 'infinitive': 'to assure', 'future': 'will assure', 'present': 'assures'}
+to laugh|verb|{}|{'past': 'laughed', 'infinitive': 'to laugh', 'future': 'will laugh', 'present': 'laughs'}
 to approve|verb|{}|{'past': 'approved', 'infinitive': 'to approve', 'future': 'will approve', 'present': 'approves'}
 to rush|verb|{}|{'past': 'rushed', 'infinitive': 'to rush', 'future': 'will rush', 'present': 'rushs'}
 to supply|verb|{}|{'past': 'supplied', 'infinitive': 'to supply', 'future': 'will supply', 'present': 'supplys'}
