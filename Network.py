@@ -1,4 +1,4 @@
-from random import randint, randrange
+import random
 import Sen_Gen as sg
 from os import getcwd
 import fileinput
@@ -45,21 +45,22 @@ def add_link(thing, things, thingie=1):
 
 words = {"noun":{}, "adjective":{}, "verb":{}, "adverb":{}, "conjunction":{}, "preposition":{}, "interjection":{}}
 blue = sg.words
-#Link read in
-for w_type in sg.words:
-	for ind in sg.words[w_type]:
-		for link in sg.words[w_type][ind].links:
-			add_link(sg.words[w_type][ind], sg.words[sg.words[w_type][ind].links[link][0]][link], sg.words[w_type][ind].links[link][1])
-			#print link, sg.words[w_type][ind].links[link][0]
+with open("%s/links_save.py" % (getcwd()), "r") as f: # save read in
+	bob = f.read().splitlines()
+for line in bob:
+	eval("add_link(%s)" % (line))
+
 
 class Word(object):
 	def __init__(self, word, w_type, forms={}):
 		self.word = word; self.type = w_type; self.local_links = []; self.word_out = []
 		if w_type == "verb": self.forms = forms
-	def add_word_ref(self, word):
+	def add_word_ref(self, word, recip=False):
 		for e in links:
 			if e.node1 == word:
 				self.local_links.append(e)
+		if recip:
+			word.add_word_ref(self, False)
 		self.word_out.append(word)
 
 sub_net_uni = {}
@@ -89,30 +90,37 @@ class Mega_Net(object):
 def add_mega_net_to(selfie=Mega_Net(""), mn=Mega_Net("")):
 	selfie.all_nodes_lists(mn.name, mn)
 
-def single_follow(startword=Word("","")):
-	out = startword.word_out
-	full_list={}
-	for e in out:
-		full_list[e.word]=e.word_out
-	return full_list
+def choose(b=[Word("","")], lean=0):
+	length = len(b)
+	randome = random.randrange(0,len(b)) #if randrange were inclusive, we would use len(b)-1
+	randome+=lean
+	if randome>len(b)-1:
+		return b[-1]
+	return b[int(randome)]
 
-def full_follow(startword=Word("",""), limit=3):
-	sf = single_follow(startword)
-	new = {}
-	for e, k in sf.iteritems():
-		for i in k:
-			new[i.word] = single_follow(i)
-	return new
+def check(a, path): #returns true if a is in path
+	if a in path:
+		return True
+	return False
 
-def readable_follow(new={}):
-	path = []
-	for e, k in new.iteritems():
-		print "Members at %s:" %(e)
-		for i, c in k.iteritems():
-			print "	" + i
-			for y in c:
-				print "     " + y.word
+def full_follow(sw=Word("",""), limit=4):
+	out = sw.word_out
+	word = choose(out)
+	i=0
+	path=[]
+	path.append(sw)
+	while True:
+		if word not in path:
+			path.append(word)
+		word = choose(word.word_out)
+		i+=1
+		if i>limit:
+			break
+	return path
+	
 
+#instead of putting dictionaries within dictionaries, just put lists in dictionaries
+#no need for the a member of a class to reference the class. That is redundant.
 
 
 
@@ -127,17 +135,20 @@ t_eat = Word("to eat", "verb")
 foods = Sub_Net("foods", "misc", [bread, cake, t_eat])
 animal_foods = Mega_Net("af", "misc", animals)
 animal_foods.add_nodes_list(foods)
-snake.add_word_ref(snail)
+snake.add_word_ref(snail, True)
 snake.add_word_ref(animal)
 snake.add_word_ref(t_eat)
-cake.add_word_ref(bread)
+cake.add_word_ref(bread, True)
 animal.add_word_ref(food)
 t_eat.add_word_ref(food)
-snail.add_word_ref(snake)
 food.add_word_ref(cake)
+snail.add_word_ref(animal)
+for e in bread.word_out:
+	print e.word
 b = full_follow(snake)
-print b
-readable_follow(b)
+print "____"
+for e in b:
+	print e.word
 
 
 
