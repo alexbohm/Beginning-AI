@@ -1,7 +1,6 @@
 import random
 import Sen_Gen as sg
 from os import getcwd
-import fileinput
 
 class Tuple_Dict(object):
 	def __init__(self):
@@ -29,9 +28,7 @@ class Link(object):
 	def chg_rdc(chg):
 		return chg-self.cd
 	def save(self):
-		with open("%s/links_save.py" % (getcwd()), "a") as f:
-			f.write("%s, %s, %d\n" % ("sg.words['%s']['%s']" % (self.node1.type, self.node1.word), "sg.words['%s']['%s']" % (self.node2.type, self.node2.word), self.cd))
-		return "Saved"
+		print "OLD save for links, use new system"
 	def return_node(self, lean=0):
 		randome = random.randrange(0,1); randome += lean
 		if randome > 0.5: return node2
@@ -43,8 +40,8 @@ def add_link(thing, things, thingie=1):
 	links.append(Link(thing, things, thingie))
 
 
-words = {"noun":{}, "adjective":{}, "verb":{}, "adverb":{}, "conjunction":{}, "preposition":{}, "interjection":{}}
-blue = sg.words
+"""words = {"noun":{}, "adjective":{}, "verb":{}, "adverb":{}, "conjunction":{}, "preposition":{}, "interjection":{}}
+blue = sg.words"""
 #Link read in
 for w_type in sg.words:
 	for ind in sg.words[w_type]:
