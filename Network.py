@@ -20,7 +20,7 @@ class Tuple_Dict(object):
 		place = self.list.index(good_one)
 		return key[place]
 
-class Link(object):
+'''class Link(object):
 	def __init__(self, node1, node2, cd):
 		self.node1 = node1
 		self.node2 = node2
@@ -47,20 +47,18 @@ for w_type in sg.words:
 	for ind in sg.words[w_type]:
 		for link in sg.words[w_type][ind].links:
 			add_link(sg.words[w_type][ind], sg.words[sg.words[w_type][ind].links[link][0]][link], sg.words[w_type][ind].links[link][1])
-			#print link, sg.words[w_type][ind].links[link][0]
+			#print link, sg.words[w_type][ind].links[link][0]'''
 
 
 class Word(object):
 	def __init__(self, word, w_type, forms={}):
-		self.word = word; self.type = w_type; self.local_links = []; self.word_out = []
+		self.word = word; self.type = w_type; self.word_out = []; self.chgs_r=[]
 		if w_type == "verb": self.forms = forms
-	def add_word_ref(self, word, recip=False):
-		for e in links:
-			if e.node1 == word:
-				self.local_links.append(e)
+	def add_word_ref(self, word, recip=False, chg_r=1):
 		if recip:
-			word.add_word_ref(self, False)
+			word.add_word_ref(self, False, chg_r)
 		self.word_out.append(word)
+		self.chgs_r.append(chg_r)
 
 sub_net_uni = {}
 sub_net_multi = {}
@@ -89,32 +87,54 @@ class Mega_Net(object):
 def add_mega_net_to(selfie=Mega_Net(""), mn=Mega_Net("")):
 	selfie.all_nodes_lists(mn.name, mn)
 
-def choose(b=[Word("","")], lean=0):
+def choose(b=[], lean=0, l_am=0): #lean is the index of the preffered list element
 	length = len(b)
 	randome = random.randrange(0,len(b)) #if randrange were inclusive, we would use len(b)-1
-	randome+=lean
+	if randome > lean:
+		randome = randome - ((l_am)/len(b)) #this formula might not be the greatest
+	elif randome <lean+0.4 and randome>lean-0.4:
+		randome = lean
+	elif randome<lean:
+		randome = randome + ((l_am)/len(b))
 	if randome>len(b)-1:
 		return b[-1]
 	return b[int(randome)]
 
 def full_follow(sw=Word("",""), limit=4):
-	out = sw.word_out
-	word = choose(out)
-	i=0
-	path=[]
-	path.append(sw)
+	word = choose(sw.word_out)
+	i, path=0,[sw]
 	while True:
+		if i>limit:
+			break
 		if word not in path:
 			path.append(word)
 		word = choose(word.word_out)
 		i+=1
+	return path
+
+def invert(e,top=10):
+	return top-e
+
+def lean_follow(sw=Word("",""), limit=4):
+	b=[]
+	for e in sw.chgs_r:
+		b.append(invert(e))
+	big = max(b)
+	c = b
+	b.remove(big)
+	sbig = max(b)
+	b = c
+	a = b.index(big)
+	word = choose(sw.word_out, a, big-sbig)
+	i, path=0,[sw]
+	while True:
 		if i>limit:
 			break
+		if word not in path:
+			path.append(word)
+		word = choose(word.word_out)
+		i+=1
 	return path
-	
-
-#instead of putting dictionaries within dictionaries, just put lists in dictionaries
-#no need for the a member of a class to reference the class. That is redundant.
 
 
 
@@ -131,17 +151,21 @@ animal_foods = Mega_Net("af", "misc", animals)
 animal_foods.add_nodes_list(foods)
 snake.add_word_ref(snail, True)
 snake.add_word_ref(animal)
-snake.add_word_ref(t_eat)
+snake.add_word_ref(t_eat, 1.7)
 cake.add_word_ref(bread, True)
-animal.add_word_ref(food)
-t_eat.add_word_ref(food)
+animal.add_word_ref(food, 2)
+t_eat.add_word_ref(food, 0.5)
 food.add_word_ref(cake)
-snail.add_word_ref(animal)
-for e in bread.word_out:
+snail.add_word_ref(animal) 
+'''for e in bread.word_out:
 	print e.word
 b = full_follow(snake)
 print "----"
 for e in b:
+	print e.word'''
+a = lean_follow(snake)
+#print snake._r[0] #given curren list, should be 1
+for e in a:
 	print e.word
 
 
