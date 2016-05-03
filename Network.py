@@ -1,5 +1,5 @@
 import random
-import Sen_Gen as sg
+import database as db
 from os import getcwd
 
 class Tuple_Dict(object):
@@ -33,21 +33,17 @@ class Tuple_Dict(object):
 		randome = random.randrange(0,1); randome += lean
 		if randome > 0.5: return node2
 		else: return node1
-
 links = []
-
 def add_link(thing, things, thingie=1):
 	links.append(Link(thing, things, thingie))
-
-
 """words = {"noun":{}, "adjective":{}, "verb":{}, "adverb":{}, "conjunction":{}, "preposition":{}, "interjection":{}}
-blue = sg.words"""
+blue = db.words"""
 #Link read in
-for w_type in sg.words:
-	for ind in sg.words[w_type]:
-		for link in sg.words[w_type][ind].links:
-			add_link(sg.words[w_type][ind], sg.words[sg.words[w_type][ind].links[link][0]][link], sg.words[w_type][ind].links[link][1])
-			#print link, sg.words[w_type][ind].links[link][0]'''
+for w_type in db.words:
+	for ind in db.words[w_type]:
+		for link in db.words[w_type][ind].links:
+			add_link(db.words[w_type][ind], db.words[db.words[w_type][ind].links[link][0]][link], db.words[w_type][ind].links[link][1])
+			#print link, db.words[w_type][ind].links[link][0]'''
 
 
 class Word(object):
@@ -167,9 +163,3 @@ a = lean_follow(snake)
 #print snake._r[0] #given curren list, should be 1
 for e in a:
 	print e.word
-
-
-
-
-
-
