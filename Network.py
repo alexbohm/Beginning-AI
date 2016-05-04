@@ -83,7 +83,7 @@ class Mega_Net(object):
 def add_mega_net_to(selfie=Mega_Net(""), mn=Mega_Net("")):
 	selfie.all_nodes_lists(mn.name, mn)
 
-def choose(b=[], lean=0, l_am=0): #lean is the index of the preffered list element
+def choose(b=[], lean=None, l_am=0): #lean is the index of the preffered list element
 	length = len(b)
 	randome = random.randrange(0,len(b)) #if randrange were inclusive, we would use len(b)-1
 	if randome > lean:
